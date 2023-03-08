@@ -29,6 +29,8 @@ map<unsigned int,int> instruction_memory;
 
 static unsigned char MEM[4000];
 // map<unsigned int,int> data_memory;
+static unsigned int instruction_memory[4000];
+
 
 
 // map<int,int> MEM;
@@ -38,7 +40,19 @@ static unsigned int instruction_word;
 static unsigned int operand1;
 static unsigned int operand2;
 
-int pc=0;
+int pc=0,nextpc=0;
+
+struct instruction_set{
+
+    char instruction_bin[32];
+    int rs1[5],rs2[5];
+    int rd[5];
+    char opcode[7];
+    int immediate[20];
+    int func3[3], func7[7];
+    char type;
+
+} instruction;
 
 void run_riscvsim() {
   while(1) {
@@ -50,13 +64,21 @@ void run_riscvsim() {
   }
 }
 
+void set_instruction_bin(int a){
+  int i=0;
+  while(a){
+    instruction.instruction_bin[i]=a%2+'0';
+    a/=2;
+    i++;
+  }
+}
+
 // it is used to set the reset values
 //reset all registers and memory content to 0
 void reset_proc() {
-    instruction_memory.clear();
-    MEM.clear();
-    for(int i=0;i<32;i++) X[i]=0;
-    pc=0;
+  for(int i=0;i<32;i++) X[i]=0;
+  for(int i=0;i<1000;i++) MEM[i]=0;
+  for(int i=0;i<1000;i++) instruction_memory[i]=0;
 }
 
 //load_program_memory reads the input memory, and populates the instruction 
@@ -70,6 +92,7 @@ void load_program_memory(char *file_name) {
     exit(1);
   }
   while(fscanf(fp, "%x %x", &address, &instruction) != EOF) {
+    address/=4;
     // write_word(MEM, address, instruction);
     instruction_memory[address]=instruction;
   }
@@ -98,26 +121,35 @@ void swi_exit() {
   exit(0);
 }
 
-struct instruction{
-
-    int rs1,rs2;
-    int rd;
-    int opcode;
-    int immediate;
-    int func3,func7;
-
-};
-
-
 
 
 //reads from the instruction memory and updates the instruction register
 void fetch() {
     instruction_word = instruction_memory[pc];
+    set_instruction_bin(instruction_word);
+    nextpc=pc+4;
 }
 
 //reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode() {
+  char* ans;
+  for(int i=0;i<7;i++) instruction.opcode[i]=instruction.instruction_bin[i];
+  char* opcode=instruction.opcode;
+  for(int i=7;i<=11;i++) instruction.rd[i-7]=instruction.instruction_bin[i];
+  for(int i=15;i<=19;i++) instruction.rs1[i-15]=instruction.instruction_bin[i];
+  for(int i=20;i<=24;i++) instruction.rs2[i-20]=instruction.instruction_bin[i];
+  for(int i=12;i<=14;i++) instruction.func3[i-12]=instruction.instruction_bin[i];
+  for(int i=25;i<=31;i++) instruction.func7[i-25]=instruction.instruction_bin[i];
+
+
+  
+  if(strcmp(opcode,"0110011")==0) instruction.type='R';
+  else if(strcmp(opcode,"0010011")==0 || strcmp(opcode,"0000011")==0 || strcmp(opcode,"1100111")==0) instruction.type='I';
+  else if(strcmp(opcode,"0100011")==0) instruction.type='S';
+  else if(strcmp(opcode,"1100011")==0) instruction.type='B';
+  else if(strcmp(opcode,"1101111")==0) instruction.type='J';
+  else if(strcmp(opcode,"0110111")==0 || strcmp(opcode,"0010111")==0) instruction.type='U';
+ 
 
 
 
