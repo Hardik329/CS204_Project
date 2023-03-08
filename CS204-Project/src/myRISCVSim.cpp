@@ -124,8 +124,82 @@ void decode() {
 }
 
 //executes the ALU operation based on ALUop
-void execute() {
+void execute()
+{
+  // i is the structure instace from decode
+  switch (i.opcode)
+  { // distributing with respect to different fun3
+  case 51:
+  { // opcode of R type returns 51 decimal value
+    if (i.fun3 == 0 && i.fun7 == 0)
+    {
+      alu_result = i.rs1 + i.rs2;
+    }
+    else if (i.fun3 == 0 && i.fun7 == 32)
+    { // fun7 for sub is 32
+      alu_result = i.rs1 - i.rs2;
+    }
+    else if (i.func3 == 4)
+    {
+      alu_result = i.rs1 ^ i.rs2;
+    }
+    else if (i.func3 == 6)
+    {
+      alu_result = i.rs1 | i.rs2;
+    }
+    else if (i.func3 == 7)
+    {
+      alu_result = i.rs1 & i.rs2;
+    }
+    else if (i.func3 == 1)
+    {
+      alu_result = i.rs1 << i.rs2;
+    }
+    else if (i.func3 == 5 && i.func7 == 0)
+    {
+      int m = (unsigned)i.rs1;
+      alu_result = m >> i.rs2;
+    }
+    else if (i.func3 == 5 && i.func7 == 32)
+    {
+      alu_result = i.rs1 >> i.rs2;
+    }
+    break;
+  }
 
+  case 19: // I format(immidiate adressing)
+  {
+    if (i.fun3 == 0 && i.fun7 == 0)
+    {
+      alu_result = i.rs1 + i.imm;
+    }
+    else if (i.func3 == 4)
+    {
+      alu_result = i.rs1 ^ i.imm;
+    }
+    else if (i.func3 == 6)
+    {
+      alu_result = i.rs1 | i.imm;
+    }
+    else if (i.func3 == 7)
+    {
+      alu_result = i.rs1 & i.rs2;
+    }
+  }
+  case 3://I format with register adressing(TH load instructions)
+  {
+    alu_result=i.r1+i.imm;
+  }
+  case 35://store instructions
+  {
+    alu_result=i.rs1+i.imm;
+  }
+  case 99://branch instructions
+  {
+    alu_result=i.rs1-i.rs2;
+  }
+
+  }
 }
 //perform the memory operation
 void mem() {
