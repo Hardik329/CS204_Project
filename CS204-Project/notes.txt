@@ -1,0 +1,2 @@
+nextpc= pc+4 in fetch
+updating pc = nextpc in execute
