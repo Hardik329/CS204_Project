@@ -25,8 +25,6 @@ Date:
 static unsigned int X[32];
 //flags
 //memory
-map<unsigned int,int> instruction_memory;
-
 static unsigned char MEM[4000];
 // map<unsigned int,int> data_memory;
 static unsigned int instruction_memory[4000];
@@ -40,16 +38,18 @@ static unsigned int instruction_word;
 static unsigned int operand1;
 static unsigned int operand2;
 
+int alu_result;
+
 int pc=0,nextpc=0;
 
 struct instruction_set{
 
     char instruction_bin[32];
-    int rs1[5],rs2[5];
-    int rd[5];
-    char opcode[7];
-    int immediate[20];
-    int func3[3], func7[7];
+    int rs1,rs2;
+    int rd;
+    char opcode;
+    int immediate;
+    int func3, func7;
     char type;
 
 } instruction;
@@ -122,6 +122,18 @@ void swi_exit() {
 }
 
 
+int bin2dec(int a,int b){
+  int ans=0;
+  int p=1;
+  for(int i=a;i<=b;i++){
+    ans+=(instruction.instruction_bin[i]-'0')*p;
+    p*=2;
+  }
+
+  return ans;
+}
+
+
 
 //reads from the instruction memory and updates the instruction register
 void fetch() {
@@ -132,25 +144,47 @@ void fetch() {
 
 //reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode() {
-  char* ans;
-  for(int i=0;i<7;i++) instruction.opcode[i]=instruction.instruction_bin[i];
-  char* opcode=instruction.opcode;
-  for(int i=7;i<=11;i++) instruction.rd[i-7]=instruction.instruction_bin[i];
-  for(int i=15;i<=19;i++) instruction.rs1[i-15]=instruction.instruction_bin[i];
-  for(int i=20;i<=24;i++) instruction.rs2[i-20]=instruction.instruction_bin[i];
-  for(int i=12;i<=14;i++) instruction.func3[i-12]=instruction.instruction_bin[i];
-  for(int i=25;i<=31;i++) instruction.func7[i-25]=instruction.instruction_bin[i];
+
+  instruction.opcode = bin2dec(0,6);
+  instruction.rd = bin2dec(7,11);
+  instruction.rs1 = bin2dec(15,19);
+  instruction.rs2 = bin2dec(20,24);
+  instruction.func3 = bin2dec(12,14);
+  instruction.func7 = bin2dec(25,31);
 
 
-  
-  if(strcmp(opcode,"0110011")==0) instruction.type='R';
-  else if(strcmp(opcode,"0010011")==0 || strcmp(opcode,"0000011")==0 || strcmp(opcode,"1100111")==0) instruction.type='I';
-  else if(strcmp(opcode,"0100011")==0) instruction.type='S';
-  else if(strcmp(opcode,"1100011")==0) instruction.type='B';
-  else if(strcmp(opcode,"1101111")==0) instruction.type='J';
-  else if(strcmp(opcode,"0110111")==0 || strcmp(opcode,"0010111")==0) instruction.type='U';
- 
+  int opcode=instruction.opcode;  
 
+  switch(opcode){
+
+    case 51:
+      instruction.type='R';
+      break;
+
+    case 19:
+    case 3:
+    case 103:
+      instruction.type='I';
+      break;
+    
+    case 35:
+      instruction.type='S';
+      break;
+    
+    case 99:
+      instruction.type='B';
+      break;
+    
+    case 111:
+      instruction.type='J';
+      break;
+    
+    case 55:
+    case 23:
+      instruction.type='U';
+      break;
+
+  }
 
 
 }
@@ -159,77 +193,85 @@ void decode() {
 void execute()
 {
   // i is the structure instace from decode
-  switch (i.opcode)
-  { // distributing with respect to different fun3
-  case 51:
-  { // opcode of R type returns 51 decimal value
-    if (i.fun3 == 0 && i.fun7 == 0)
-    {
-      alu_result = i.rs1 + i.rs2;
-    }
-    else if (i.fun3 == 0 && i.fun7 == 32)
-    { // fun7 for sub is 32
-      alu_result = i.rs1 - i.rs2;
-    }
-    else if (i.func3 == 4)
-    {
-      alu_result = i.rs1 ^ i.rs2;
-    }
-    else if (i.func3 == 6)
-    {
-      alu_result = i.rs1 | i.rs2;
-    }
-    else if (i.func3 == 7)
-    {
-      alu_result = i.rs1 & i.rs2;
-    }
-    else if (i.func3 == 1)
-    {
-      alu_result = i.rs1 << i.rs2;
-    }
-    else if (i.func3 == 5 && i.func7 == 0)
-    {
-      int m = (unsigned)i.rs1;
-      alu_result = m >> i.rs2;
-    }
-    else if (i.func3 == 5 && i.func7 == 32)
-    {
-      alu_result = i.rs1 >> i.rs2;
-    }
-    break;
-  }
+  operand1 = instruction.rs1;    
+  operand2 = instruction.rs2;
 
-  case 19: // I format(immidiate adressing)
-  {
-    if (i.fun3 == 0 && i.fun7 == 0)
-    {
-      alu_result = i.rs1 + i.imm;
+  switch (instruction.opcode)
+  { // distributing with respect to different func3
+    case 51:
+    { // opcode of R type returns 51 decimal value
+
+
+      if (instruction.func3 == 0 && instruction.func7 == 0)
+      {
+        alu_result = operand1 + operand2;
+      }
+      else if (instruction.func3 == 0 && instruction.func7 == 32)
+      { // func7 for sub is 32
+        alu_result = operand1 - operand2;
+      }
+      else if (instruction.func3 == 4)
+      {
+        alu_result = operand1 ^ operand2;
+      }
+      else if (instruction.func3 == 6)
+      {
+        alu_result = operand1 | operand2;
+      }
+      else if (instruction.func3 == 7)
+      {
+        alu_result = operand1 & operand2;
+      }
+      else if (instruction.func3 == 1)
+      {
+        alu_result = operand1 << operand2;
+      }
+      else if (instruction.func3 == 5 && instruction.func7 == 0)
+      {
+        int m = (unsigned)operand1;
+        alu_result = m >> operand2;
+      }
+      else if (instruction.func3 == 5 && instruction.func7 == 32)
+      {
+        alu_result = operand1 >> operand2;
+      }
+      break;
     }
-    else if (i.func3 == 4)
+
+    case 19: // I format(immidiate adressing)
     {
-      alu_result = i.rs1 ^ i.imm;
+      operand2 = instruction.immediate;
+
+      if (instruction.func3 == 0 && instruction.func7 == 0)
+      {
+        alu_result = operand1 + instruction.immediate;
+      }
+      else if (instruction.func3 == 4)
+      {
+        alu_result = operand1 ^ instruction.immediate;
+      }
+      else if (instruction.func3 == 6)
+      {
+        alu_result = operand1 | instruction.immediate;
+      }
+      else if (instruction.func3 == 7)
+      {
+        operand2 = instruction.rs2;
+        alu_result = operand1 & operand2;
+      }
     }
-    else if (i.func3 == 6)
+    case 3://I format with register adressing(TH load instructions)
     {
-      alu_result = i.rs1 | i.imm;
+      alu_result=operand1+instruction.immediate;
     }
-    else if (i.func3 == 7)
+    case 35://store instructions
     {
-      alu_result = i.rs1 & i.rs2;
+      alu_result=operand1+instruction.immediate;
     }
-  }
-  case 3://I format with register adressing(TH load instructions)
-  {
-    alu_result=i.r1+i.imm;
-  }
-  case 35://store instructions
-  {
-    alu_result=i.rs1+i.imm;
-  }
-  case 99://branch instructions
-  {
-    alu_result=i.rs1-i.rs2;
-  }
+    case 99://branch instructions
+    {
+      alu_result=operand1-operand2;
+    }
 
   }
 }
