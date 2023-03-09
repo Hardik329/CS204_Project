@@ -376,6 +376,26 @@ void mem()
 // writes the results back to register file
 void write_back()
 {
+  if(instruction.opcode==19||instruction.opcode==51){
+    X[instruction.rd]=MEM_result;//the MEM and wb buffer registers(storing required data for wb stage)
+  }
+  else if(instruction.opcode==3){//load instruction
+    X[instruction.rd]=MEM_result;//here mem result stores the M[rs1+imm] in sign extenede form
+  }                              //nothing to be done for store instrucytion in writeback stage
+  else if(instruction.opcode==111){//jal instruction
+    X[instruction.rd]=pc+4;
+  }
+  else if(instruction.opcode==103){//jalr
+    X[instruction.rd]=pc+4;
+  }
+  else if(instruction.opcode==55){//lui
+    X[instruction.rd]=instruction.immediate<<12;
+  }
+  else if(instruction.opcode==23){//auipc
+    X[instruction.rd]=pc+(instruction.immediate<<12);
+  }
+
+
 
 }
 
