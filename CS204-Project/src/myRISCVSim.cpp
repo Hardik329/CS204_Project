@@ -280,8 +280,16 @@ void execute()
     }
     else if (instruction.func3 == 5 && instruction.func7 == 0) //srl
     {
-      int m = (unsigned)operand1;
-      alu_result = m >> operand2;
+      int m = operand1;
+      if (m >= 0)
+      {
+        alu_result = m >> operand2;
+      }
+      else
+      {
+        int n = pow(2, 32) + m;
+        alu_result = n >> operand2;
+      }
     }
     else if (instruction.func3 == 5 && instruction.func7 == 32) //sra
     {
