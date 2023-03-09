@@ -351,11 +351,13 @@ void execute()
   }
   case 111: //jal
   {
-    break;
+     nextpc=pc+instruction.immediate;
+     break;
   }
   case 103:   //jalr
   {
     alu_result = operand1 + instruction.immediate;
+    nextpc=alu_result;
     break;
   }
   case 55: //lui
