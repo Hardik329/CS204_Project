@@ -379,6 +379,7 @@ void execute()
   }
 }
 // perform the memory operation
+int MEM_result=0
 void mem()
 {
    if(instruction.opcode==3){//mem for load instruction
