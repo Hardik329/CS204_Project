@@ -361,6 +361,20 @@ void execute()
   case 99: // branch instructions  beq,bne,bge,blt
   {
     alu_result = operand1 - operand2;
+    if(instruction.func3==0&& alu_result==0){
+      nextpc=pc +instruction.immediate;
+    }
+    else if(instruction.func3==1 && alu_result!=0){
+      nextpc=pc+instruction.immediate;
+    }
+    else if(instruction.func3==4 && alu_result<0){
+      nextpc=pc+instruction.immediate;
+    }
+    else if(instruction.func3==5 && alu_result>=0){
+      nextpc=pc+instruction.immediate;
+    }
+    
+    break;
     break;
   }
   case 111: //jal
