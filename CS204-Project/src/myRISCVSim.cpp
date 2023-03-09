@@ -176,27 +176,7 @@ void decode()
     break;
 
   case 19:
-    instruction.type = 'I';
-    if (instruction.instruction_bin[31] == '0')
-    {
-      instruction.immediate = bin2dec(20,31);
-    }
-    else if(instruction.instruction_bin[31] == '1')
-    {
-      instruction.immediate = (bin2dec(20,31))-pow(2,12);
-    }
-    break;
   case 3:
-    instruction.type = 'I';
-    if (instruction.instruction_bin[31] == '0')
-    {
-      instruction.immediate = bin2dec(20,31);
-    }
-    else if(instruction.instruction_bin[31] == '1')
-    {
-      instruction.immediate = (bin2dec(20,31))-pow(2,12);
-    }
-    break;
   case 103:
     instruction.type = 'I';
     if (instruction.instruction_bin[31] == '0')
@@ -231,6 +211,7 @@ void decode()
     {
       instruction.immediate = bin2dec(8,11) + ((bin2dec(25,30)) * 16) + (pow(2,10)*(instruction.instruction_bin[7]-'0')) -pow(2,11) ;
     }
+    instruction.immediate*=2;
     break;
 
   case 111:
@@ -243,19 +224,10 @@ void decode()
     {
       instruction.immediate = bin2dec(21,30) + (pow(2,10)*(instruction.instruction_bin[20]-'0')) + (bin2dec(12,19)*pow(2,11)) - pow(2,19);
     }
+    instruction.immediate*=2;
     break;
 
   case 55:
-    instruction.type = 'U';
-    if (instruction.instruction_bin[31] == '0')
-    {
-      instruction.immediate = bin2dec(12,31);
-    }
-    else if(instruction.instruction_bin[31] == '1')
-    {
-      instruction.immediate = (bin2dec(12,31))-pow(2,20);
-    }
-    break;
   case 23:
     instruction.type = 'U';
     if (instruction.instruction_bin[31] == '0')
