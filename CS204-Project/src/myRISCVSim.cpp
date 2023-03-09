@@ -380,7 +380,7 @@ void write_back()
     X[instruction.rd]=MEM_result;//the MEM and wb buffer registers(storing required data for wb stage)
   }
   else if(instruction.opcode==3){//load instruction
-    X[instruction.rd]=MEM_result;//here mem result stores the M[rs1+imm] in sign extenede form
+    X[instruction.rd]=MEM_result;//here mem result stores the M[rs1+imm] in sign extended form
   }                              //nothing to be done for store instrucytion in writeback stage
   else if(instruction.opcode==111){//jal instruction
     X[instruction.rd]=pc+4;
