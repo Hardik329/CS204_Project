@@ -433,6 +433,104 @@ void mem()
       MEM_result = MEM[alu_result];
     }
   }
+   else if (instruction.opcode == 35)
+  {                                        //store memory access
+    MEM_result = 0;
+    if (instruction.func3 == 0)
+    {
+      unsigned int temp = 0;
+      if (MEM[alu_result] < 0)
+      { // 2 compliment representation of MEM[alu_result]
+        temp = pow(2, 32) + MEM[alu_result];
+      }
+      else
+      {
+        temp = MEM[alu_result];
+      }
+      int array[32];
+      for (int i = 0; i <= 32; i++)
+      {
+        array[i] = temp % 2;
+        temp = temp / 2;
+      }
+      unsigned int temp1 = 0;
+      if (X[instruction.rs2] < 0)
+      { // 2 compliment representation of X[instruction.rs2]
+        temp1 = pow(2, 32) + X[instruction.rs2];
+      }
+      else
+      {
+        temp1 = X[instruction.rs2];
+      }
+      int array1[32];
+      for (int i = 0; i <= 32; i++)
+      {
+        array1[i] = temp1 % 2;
+        temp1 = temp1 / 2;
+      }
+      for (int i = 0; i <= 7; i++)
+      {
+        array[i] = array1[i];
+      }
+      int f = 1;
+      for (int i = 0; i < 31; i++)
+      {
+        MEM_result = f * array[i] + MEM_result;
+        f = f * 2;
+      }
+      MEM_result = MEM_result - array[31] * pow(2, 31);
+      MEM[alu_result] = MEM_result;
+    }
+    else if (instruction.func3 == 1)
+    {
+      unsigned int temp = 0;
+      if (MEM[alu_result] < 0)
+      { // 2 compliment representation of MEM[alu_result]
+        temp = pow(2, 32) + MEM[alu_result];
+      }
+      else
+      {
+        temp = MEM[alu_result];
+      }
+      int array[32];
+      for (int i = 0; i <= 32; i++)
+      {
+        array[i] = temp % 2;
+        temp = temp / 2;
+      }
+      unsigned int temp1 = 0;
+      if (X[instruction.rs2] < 0)
+      { // 2 compliment representation of X[instruction.rs2]
+        temp1 = pow(2, 32) + X[instruction.rs2];
+      }
+      else
+      {
+        temp1 = X[instruction.rs2];
+      }
+      int array1[32];
+      for (int i = 0; i <= 32; i++)
+      {
+        array1[i] = temp1 % 2;
+        temp1 = temp1 / 2;
+      }
+      for (int i = 0; i <= 15; i++)
+      {
+        array[i] = array1[i];
+      }
+      int f = 1;
+      for (int i = 0; i < 31; i++)
+      {
+        MEM_result = f * array[i] + MEM_result;
+        f = f * 2;
+      }
+      MEM_result = MEM_result - array[31] * pow(2, 31);
+      MEM[alu_result] = MEM_result;
+    }
+    else if (instruction.func3 == 2)
+    {
+      MEM[alu_result] = X[instruction.rs2];
+    }
+  }
 }
 // writes the results back to register file
 void write_back()
