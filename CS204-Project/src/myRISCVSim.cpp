@@ -434,7 +434,7 @@ void mem()
 void write_back()
 {
   if(instruction.opcode==19||instruction.opcode==51){
-    X[instruction.rd]=MEM_result;//the MEM and wb buffer registers(storing required data for wb stage)
+    X[instruction.rd]=alu_result;//the MEM and wb buffer registers(storing required data for wb stage)
   }
   else if(instruction.opcode==3){//load instruction
     X[instruction.rd]=MEM_result;//here mem result stores the M[rs1+imm] in sign extended form
