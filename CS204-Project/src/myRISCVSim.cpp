@@ -15,20 +15,24 @@ Date:
 */
 
 #include "myRISCVSim.h"
-#include <stdlib.h>
 #include <stdio.h>
-#include <map>
+#include <unordered_map>
 #include <math.h>
+#include <string.h>
+#include <string>
+#include <iostream>
+
+using namespace std;
 
 // Register file
 static unsigned int X[32];
 // flags
-// memory
-static unsigned char MEM[4000];
-// map<unsigned int,int> data_memory;
-static unsigned int instruction_memory[4000];
 
-// map<int,int> MEM;
+// memory
+static unordered_map<unsigned int,int> instruction_memory;
+
+static unordered_map<unsigned int,int> MEM;
+
 
 // intermediate datapath and control path signals
 static unsigned int instruction_word;
@@ -38,6 +42,7 @@ static unsigned int operand2;
 int alu_result = 0;
 
 int pc = 0, nextpc = 0;
+int clock = 0;
 
 struct instruction_set
 {
@@ -49,8 +54,11 @@ struct instruction_set
   int immediate;
   int func3, func7;
   char type;
+  string name;
+
 
 } instruction;
+
 
 void run_riscvsim()
 {
@@ -64,12 +72,14 @@ void run_riscvsim()
   }
 }
 
-void set_instruction_bin(int a)
+void set_instruction_bin(unsigned int a)
 {
+  for(int i=0;i<32;i++) instruction.instruction_bin[i]='0';
+  cout<<"a: "<<a<<endl;
   int i = 0;
   while (a)
   {
-    instruction.instruction_bin[i] = a % 2 + '0';
+    if(a%2==1) instruction.instruction_bin[i]='1';
     a /= 2;
     i++;
   }
@@ -101,9 +111,7 @@ void load_program_memory(char *file_name)
   }
   while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
   {
-    address /= 4;
-    // write_word(MEM, address, instruction);
-    instruction_memory[address] = instruction;
+    instruction_memory[address/4] = instruction;
   }
   fclose(fp);
 }
@@ -122,7 +130,7 @@ void write_data_memory()
 
   for (i = 0; i < 4000; i = i + 4)
   {
-    fprintf(fp, "%x %x\n", i, MEM[i]);
+    fprintf(fp, "%x %x\n", i, MEM[i/4]);
   }
   fclose(fp);
 }
@@ -150,10 +158,15 @@ int bin2dec(int a, int b)
 // reads from the instruction memory and updates the instruction register
 void fetch()
 {
-  instruction_word = instruction_memory[pc];
+  instruction_word = instruction_memory[pc/4];
   set_instruction_bin(instruction_word);
+  cout<<instruction.instruction_bin<<endl;
   nextpc = pc + 4;
+  if(instruction_word==0x7fffffff) swi_exit();
+
+  printf("Fetched instruction at PC 0x%x\n",pc);
 }
+
 
 // reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode()
@@ -167,6 +180,7 @@ void decode()
   instruction.func7 = bin2dec(25, 31);
 
   int opcode = instruction.opcode;
+  cout<<"opcode:"<<opcode<<endl;
 
   switch (opcode)
   {
@@ -235,11 +249,15 @@ void decode()
       instruction.immediate = bin2dec(12, 31);
     }
     else if (instruction.instruction_bin[31] == '1')
-    {
+    { 
       instruction.immediate = (bin2dec(12, 31)) - pow(2, 20);
     }
     break;
   }
+
+  printf("Decoded a %c type instruction at PC 0x%x\n",instruction.type,pc);
+
+  
 }
 
 // executes the ALU operation based on ALUop
@@ -248,6 +266,7 @@ void execute()
   // i is the structure instace from decode
   operand1 = X[instruction.rs1];
   operand2 = X[instruction.rs2];
+  string &name = instruction.name;
 
   switch (instruction.opcode)
   { // distributing with respect to different func3
@@ -256,38 +275,47 @@ void execute()
 
     if (instruction.func3 == 0 && instruction.func7 == 0) // add
     {
+      name = "ADD";
       alu_result = operand1 + operand2;
     }
     else if (instruction.func3 == 0 && instruction.func7 == 32) // sub
     {                                                           // func7 for sub is 32
+      name = "SUB";
       alu_result = operand1 - operand2;
     }
     else if (instruction.func3 == 4) // xor
     {
+      name = "XOR";
       alu_result = operand1 ^ operand2;
     }
     else if (instruction.func3 == 6) // or
     {
+      name = "OR";
       alu_result = operand1 | operand2;
     }
     else if (instruction.func3 == 7) // and
     {
+      name = "AND";
       alu_result = operand1 & operand2;
     }
     else if (instruction.func3 == 1) // sll
     {
+      name = "SLL";
       alu_result = operand1 << operand2;
     }
     else if (instruction.func3 == 5 && instruction.func7 == 0) // srl
     {
+      name = "SRL";
       alu_result = (int)((unsigned int)operand1 >> operand2);
     }
     else if (instruction.func3 == 5 && instruction.func7 == 32) // sra
     {
+      name = "SRA";
       alu_result = operand1 >> operand2;
     }
     else if (instruction.func3 == 2) // slt
     {
+      name = "SLT";
       if (operand1 < operand2)
       {
         alu_result = 1;
@@ -300,20 +328,23 @@ void execute()
     break;
   }
 
-  case 19: // I format(immidiate adressing)
+  case 19: // I format(immediate adressing)
   {
     operand2 = instruction.immediate;
 
     if (instruction.func3 == 0 && instruction.func7 == 0) // addi
     {
+      name = "ADDI";
       alu_result = operand1 + operand2;
     }
     else if (instruction.func3 == 6) // ori
     {
+      name = "ORI";
       alu_result = operand1 | operand2;
     }
     else if (instruction.func3 == 7) // andi
     {
+      name = "ANDI";
       alu_result = operand1 & operand2;
     }
     break;
@@ -321,31 +352,36 @@ void execute()
 
   case 3: // I format with register adressing(TH load instructions)  lb,lh,lw
   {
+    name = "LOAD";
     alu_result = operand1 + instruction.immediate;
     break;
   }
   case 35: // store instructions sb,sh,sw
   {
+    name = "STORE";
     alu_result = operand1 + instruction.immediate;
     break;
   }
   case 99: // branch instructions  beq,bne,bge,blt
   {
     alu_result = operand1 - operand2;
-    if (instruction.func3 == 0 && alu_result == 0)
+    if (instruction.func3 == 0 && alu_result == 0)  // beq
     {
+      name = "BEQ";
       nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 1 && alu_result != 0)
+    else if (instruction.func3 == 1 && alu_result != 0) // bne
     {
+      name = "BNE";
       nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 4 && alu_result < 0)
+    else if (instruction.func3 == 4 && alu_result < 0) // blt
     {
+      name = "BLT";
       nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 5 && alu_result >= 0)
-    {
+    else if (instruction.func3 == 5 && alu_result >= 0) // bge
+    {name = "BGE";
       nextpc = pc + instruction.immediate;
     }
 
@@ -353,24 +389,32 @@ void execute()
   }
   case 111: // jal
   {
+    name = "JAL";
     nextpc = pc + instruction.immediate;
     break;
   }
   case 103: // jalr
   {
+    name = "JALR";
     alu_result = operand1 + instruction.immediate;
     nextpc = alu_result;
     break;
   }
   case 55: // lui
   {
+    name = "LUI";
+    alu_result = instruction.immediate << 12;
     break;
   }
   case 23: // auipc
   {
+    name = "AUIPC";
+    alu_result = pc + (instruction.immediate << 12);
     break;
   }
   }
+  printf("Executed instruction at PC 0x%x\n",pc);
+
 }
 // perform the memory operation
 int MEM_result = 0;
@@ -433,7 +477,8 @@ void mem()
       MEM_result = MEM[alu_result];
     }
   }
-   else if (instruction.opcode == 35)
+  
+  else if (instruction.opcode == 35)
   {                                        //store memory access
     MEM_result = 0;
     if (instruction.func3 == 0)
@@ -531,6 +576,10 @@ void mem()
       MEM[alu_result] = X[instruction.rs2];
     }
   }
+
+  else return;
+
+  printf("Memory accessed for instruction at PC 0x%x\n",pc);
 }
 // writes the results back to register file
 void write_back()
@@ -542,7 +591,7 @@ void write_back()
   else if (instruction.opcode == 3)
   {                                 // load instruction
     X[instruction.rd] = MEM_result; // here mem result stores the M[rs1+imm] in sign extended form
-  }                                 // nothing to be done for store instrucytion in writeback stage
+  }                                 // nothing to be done for store instruction in writeback stage
   else if (instruction.opcode == 111)
   { // jal instruction
     X[instruction.rd] = pc + 4;
@@ -553,22 +602,18 @@ void write_back()
   }
   else if (instruction.opcode == 55)
   { // lui
-    X[instruction.rd] = instruction.immediate << 12;
+    X[instruction.rd] = alu_result;
   }
   else if (instruction.opcode == 23)
   { // auipc
-    X[instruction.rd] = pc + (instruction.immediate << 12);
+    X[instruction.rd] = alu_result;
   }
+  clock++;
+  printf("Writeback for instruction at PC 0x%x\n",pc);
+  printf("Instruction info: %s instruction\n",instruction.name);
+  pc=nextpc;
+
+  printf("Clock cycle: %d",clock);
+
+  
 }
-
-// int read_word(char *mem, unsigned int address) {
-//   int *data;
-//   data =  (int*) (mem + address);
-//   return *data;
-// }
-
-// void write_word(char *mem, unsigned int address, unsigned int data) {
-//   int *data_p;
-//   data_p = (int*) (mem + address);
-//   *data_p = data;
-// }
