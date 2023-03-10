@@ -18,7 +18,7 @@ Date:
 #include <stdlib.h>
 #include <stdio.h>
 #include <map>
-#include<math.h>
+#include <math.h>
 
 // Register file
 static unsigned int X[32];
@@ -181,11 +181,11 @@ void decode()
     instruction.type = 'I';
     if (instruction.instruction_bin[31] == '0')
     {
-      instruction.immediate = bin2dec(20,31);
+      instruction.immediate = bin2dec(20, 31);
     }
-    else if(instruction.instruction_bin[31] == '1')
+    else if (instruction.instruction_bin[31] == '1')
     {
-      instruction.immediate = (bin2dec(20,31))-pow(2,12);
+      instruction.immediate = (bin2dec(20, 31)) - pow(2, 12);
     }
     break;
 
@@ -195,9 +195,9 @@ void decode()
     {
       instruction.immediate = instruction.rd + ((instruction.func7) * 32);
     }
-    else if(instruction.instruction_bin[31] == '1')
+    else if (instruction.instruction_bin[31] == '1')
     {
-      instruction.immediate = (instruction.rd + ((instruction.func7) * 32))-pow(2,12);
+      instruction.immediate = (instruction.rd + ((instruction.func7) * 32)) - pow(2, 12);
     }
     break;
 
@@ -205,26 +205,26 @@ void decode()
     instruction.type = 'B';
     if (instruction.instruction_bin[31] == '0')
     {
-      instruction.immediate = bin2dec(8,11) + ((bin2dec(25,30)) * 16) + (pow(2,10)*(instruction.instruction_bin[7]-'0'));
+      instruction.immediate = bin2dec(8, 11) + ((bin2dec(25, 30)) * 16) + (pow(2, 10) * (instruction.instruction_bin[7] - '0'));
     }
-    else if(instruction.instruction_bin[31] == '1')
+    else if (instruction.instruction_bin[31] == '1')
     {
-      instruction.immediate = bin2dec(8,11) + ((bin2dec(25,30)) * 16) + (pow(2,10)*(instruction.instruction_bin[7]-'0')) -pow(2,11) ;
+      instruction.immediate = bin2dec(8, 11) + ((bin2dec(25, 30)) * 16) + (pow(2, 10) * (instruction.instruction_bin[7] - '0')) - pow(2, 11);
     }
-    instruction.immediate*=2;
+    instruction.immediate *= 2;
     break;
 
   case 111:
     instruction.type = 'J';
     if (instruction.instruction_bin[31] == '0')
     {
-      instruction.immediate = bin2dec(21,30) + (pow(2,10)*(instruction.instruction_bin[20]-'0')) + (bin2dec(12,19)*pow(2,11));
+      instruction.immediate = bin2dec(21, 30) + (pow(2, 10) * (instruction.instruction_bin[20] - '0')) + (bin2dec(12, 19) * pow(2, 11));
     }
-    else if(instruction.instruction_bin[31] == '1')
+    else if (instruction.instruction_bin[31] == '1')
     {
-      instruction.immediate = bin2dec(21,30) + (pow(2,10)*(instruction.instruction_bin[20]-'0')) + (bin2dec(12,19)*pow(2,11)) - pow(2,19);
+      instruction.immediate = bin2dec(21, 30) + (pow(2, 10) * (instruction.instruction_bin[20] - '0')) + (bin2dec(12, 19) * pow(2, 11)) - pow(2, 19);
     }
-    instruction.immediate*=2;
+    instruction.immediate *= 2;
     break;
 
   case 55:
@@ -232,11 +232,11 @@ void decode()
     instruction.type = 'U';
     if (instruction.instruction_bin[31] == '0')
     {
-      instruction.immediate = bin2dec(12,31);
+      instruction.immediate = bin2dec(12, 31);
     }
-    else if(instruction.instruction_bin[31] == '1')
+    else if (instruction.instruction_bin[31] == '1')
     {
-      instruction.immediate = (bin2dec(12,31))-pow(2,20);
+      instruction.immediate = (bin2dec(12, 31)) - pow(2, 20);
     }
     break;
   }
@@ -254,44 +254,35 @@ void execute()
   case 51:
   { // opcode of R type returns 51 decimal value
 
-    if (instruction.func3 == 0 && instruction.func7 == 0)  //add
+    if (instruction.func3 == 0 && instruction.func7 == 0) // add
     {
       alu_result = operand1 + operand2;
     }
-    else if (instruction.func3 == 0 && instruction.func7 == 32)  //sub
-    { // func7 for sub is 32
+    else if (instruction.func3 == 0 && instruction.func7 == 32) // sub
+    {                                                           // func7 for sub is 32
       alu_result = operand1 - operand2;
     }
-    else if (instruction.func3 == 4)  //xor
+    else if (instruction.func3 == 4) // xor
     {
       alu_result = operand1 ^ operand2;
     }
-    else if (instruction.func3 == 6)  //or
+    else if (instruction.func3 == 6) // or
     {
       alu_result = operand1 | operand2;
     }
-    else if (instruction.func3 == 7)  //and
+    else if (instruction.func3 == 7) // and
     {
       alu_result = operand1 & operand2;
     }
-    else if (instruction.func3 == 1) //sll
+    else if (instruction.func3 == 1) // sll
     {
       alu_result = operand1 << operand2;
     }
-    else if (instruction.func3 == 5 && instruction.func7 == 0) //srl
+    else if (instruction.func3 == 5 && instruction.func7 == 0) // srl
     {
-      int m = operand1;
-      if (m >= 0)
-      {
-        alu_result = m >> operand2;
-      }
-      else
-      {
-        unsigned int n = pow(2, 32) + m;
-        alu_result = n >> operand2;
-      }
+      alu_result = (int)((unsigned int)operand1 >> operand2);
     }
-    else if (instruction.func3 == 5 && instruction.func7 == 32) //sra
+    else if (instruction.func3 == 5 && instruction.func7 == 32) // sra
     {
       alu_result = operand1 >> operand2;
     }
@@ -313,15 +304,15 @@ void execute()
   {
     operand2 = instruction.immediate;
 
-    if (instruction.func3 == 0 && instruction.func7 == 0)    //addi
+    if (instruction.func3 == 0 && instruction.func7 == 0) // addi
     {
       alu_result = operand1 + operand2;
     }
-    else if (instruction.func3 == 6)     //ori
+    else if (instruction.func3 == 6) // ori
     {
       alu_result = operand1 | operand2;
     }
-    else if (instruction.func3 == 7)    //andi
+    else if (instruction.func3 == 7) // andi
     {
       alu_result = operand1 & operand2;
     }
@@ -341,119 +332,135 @@ void execute()
   case 99: // branch instructions  beq,bne,bge,blt
   {
     alu_result = operand1 - operand2;
-    if(instruction.func3==0&& alu_result==0){
-      nextpc=pc +instruction.immediate;
+    if (instruction.func3 == 0 && alu_result == 0)
+    {
+      nextpc = pc + instruction.immediate;
     }
-    else if(instruction.func3==1 && alu_result!=0){
-      nextpc=pc+instruction.immediate;
+    else if (instruction.func3 == 1 && alu_result != 0)
+    {
+      nextpc = pc + instruction.immediate;
     }
-    else if(instruction.func3==4 && alu_result<0){
-      nextpc=pc+instruction.immediate;
+    else if (instruction.func3 == 4 && alu_result < 0)
+    {
+      nextpc = pc + instruction.immediate;
     }
-    else if(instruction.func3==5 && alu_result>=0){
-      nextpc=pc+instruction.immediate;
+    else if (instruction.func3 == 5 && alu_result >= 0)
+    {
+      nextpc = pc + instruction.immediate;
     }
-    
+
     break;
-  
   }
-  case 111: //jal
+  case 111: // jal
   {
-     nextpc=pc+instruction.immediate;
-     break;
+    nextpc = pc + instruction.immediate;
+    break;
   }
-  case 103:   //jalr
+  case 103: // jalr
   {
     alu_result = operand1 + instruction.immediate;
-    nextpc=alu_result;
+    nextpc = alu_result;
     break;
   }
-  case 55: //lui
+  case 55: // lui
   {
     break;
   }
-  case 23: //auipc
+  case 23: // auipc
   {
     break;
   }
   }
 }
 // perform the memory operation
-int MEM_result=0
+int MEM_result = 0;
 void mem()
 {
-   if(instruction.opcode==3){//mem for load instruction
-    if(instruction.func3==0){
-      unsigned int temp=0;
-      if(MEM[alu_result]<0){//2 compliment representation of MEM[alu_result]
-           temp=pow(2,32)+MEM[alu_result];
+  if (instruction.opcode == 3)
+  { // mem for load instruction
+    if (instruction.func3 == 0)
+    {
+      unsigned int temp = 0;
+      if (MEM[alu_result] < 0)
+      { // 2 compliment representation of MEM[alu_result]
+        temp = pow(2, 32) + MEM[alu_result];
       }
-      else{
-           temp=MEM[alu_result];
-      }
-      int array[32];
-      for(int i=0;i<=32;i++){
-        array[i]=temp%2;
-        temp=temp/2;
-      }
-      int f=1;
-      for(int i=0;i<7;i++){
-        MEM_result=f*array[i]+MEM_result;
-        f=f*2;
-      }
-      MEM_result=MEM_result-array[7]*pow(2,7);
-    }
-    else if(instruction.func3==1){
-      unsigned int temp=0;
-      if(MEM[alu_result]<0){//2 compliment representation of MEM[alu_result]
-           temp=pow(2,32)+MEM[alu_result];
-      }
-      else{
-           temp=MEM[alu_result];
+      else
+      {
+        temp = MEM[alu_result];
       }
       int array[32];
-      for(int i=0;i<=32;i++){
-        array[i]=temp%2;
-        temp=temp/2;
+      for (int i = 0; i <= 32; i++)
+      {
+        array[i] = temp % 2;
+        temp = temp / 2;
       }
-      int f=1;
-      for(int i=0;i<15;i++){
-        MEM_result=f*array[i]+MEM_result;
-        f=f*2;
+      int f = 1;
+      for (int i = 0; i < 7; i++)
+      {
+        MEM_result = f * array[i] + MEM_result;
+        f = f * 2;
       }
-      MEM_result=MEM_result-array[15]*pow(2,15);
-
+      MEM_result = MEM_result - array[7] * pow(2, 7);
     }
-    else if(instruction.func3==2){
-      MEM_result=MEM[alu_result];
+    else if (instruction.func3 == 1)
+    {
+      unsigned int temp = 0;
+      if (MEM[alu_result] < 0)
+      { // 2 compliment representation of MEM[alu_result]
+        temp = pow(2, 32) + MEM[alu_result];
+      }
+      else
+      {
+        temp = MEM[alu_result];
+      }
+      int array[32];
+      for (int i = 0; i <= 32; i++)
+      {
+        array[i] = temp % 2;
+        temp = temp / 2;
+      }
+      int f = 1;
+      for (int i = 0; i < 15; i++)
+      {
+        MEM_result = f * array[i] + MEM_result;
+        f = f * 2;
+      }
+      MEM_result = MEM_result - array[15] * pow(2, 15);
+    }
+    else if (instruction.func3 == 2)
+    {
+      MEM_result = MEM[alu_result];
     }
   }
-  
 }
 // writes the results back to register file
 void write_back()
 {
-  if(instruction.opcode==19||instruction.opcode==51){
-    X[instruction.rd]=alu_result;//the MEM and wb buffer registers(storing required data for wb stage)
+  if (instruction.opcode == 19 || instruction.opcode == 51)
+  {
+    X[instruction.rd] = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
   }
-  else if(instruction.opcode==3){//load instruction
-    X[instruction.rd]=MEM_result;//here mem result stores the M[rs1+imm] in sign extended form
-  }                              //nothing to be done for store instrucytion in writeback stage
-  else if(instruction.opcode==111){//jal instruction
-    X[instruction.rd]=pc+4;
+  else if (instruction.opcode == 3)
+  {                                 // load instruction
+    X[instruction.rd] = MEM_result; // here mem result stores the M[rs1+imm] in sign extended form
+  }                                 // nothing to be done for store instrucytion in writeback stage
+  else if (instruction.opcode == 111)
+  { // jal instruction
+    X[instruction.rd] = pc + 4;
   }
-  else if(instruction.opcode==103){//jalr
-    X[instruction.rd]=pc+4;
+  else if (instruction.opcode == 103)
+  { // jalr
+    X[instruction.rd] = pc + 4;
   }
-  else if(instruction.opcode==55){//lui
-    X[instruction.rd]=instruction.immediate<<12;
+  else if (instruction.opcode == 55)
+  { // lui
+    X[instruction.rd] = instruction.immediate << 12;
   }
-  else if(instruction.opcode==23){//auipc
-    X[instruction.rd]=pc+(instruction.immediate<<12);
+  else if (instruction.opcode == 23)
+  { // auipc
+    X[instruction.rd] = pc + (instruction.immediate << 12);
   }
-
-
-
 }
 
 // int read_word(char *mem, unsigned int address) {
