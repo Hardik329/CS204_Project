@@ -25,7 +25,7 @@ Date:
 using namespace std;
 
 // Register file
-static unsigned int X[32];
+static int X[32];
 // flags
 
 // memory
@@ -43,6 +43,7 @@ int alu_result = 0;
 
 int pc = 0, nextpc = 0;
 int clock = 0;
+
 
 struct instruction_set
 {
@@ -90,6 +91,10 @@ void reset_proc()
 {
   for (int i = 0; i < 32; i++)
     X[i] = 0;
+
+  X[2] = 0x7ffffffc; // stack pointer
+  X[3] = 0x10000000; // global pointer
+
   MEM.clear();
   instruction_memory.clear();
 }
@@ -103,7 +108,7 @@ void load_program_memory(char *file_name)
   fp = fopen(file_name, "r");
   if (fp == NULL)
   {
-    printf("Error opening input mem file\n");
+    printf("Error opening input .mc file\n");
     exit(1);
   }
   while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
@@ -111,39 +116,46 @@ void load_program_memory(char *file_name)
     instruction_memory[address] = instruction;
   }
   fclose(fp);
-  FILE *fp1;
-  i=0;
-  fp1 = fopen("Register_file.mem", "w");
-  if (fp1 == NULL)
-  {
-    printf("Error opening REgister_file.mem file for writing\n");
-    return;
-  }
-
-  for (i = 0; i < 32; i++)
-  {
-    fprintf(fp1, "%d\n",X[i]);
-  }
-  fclose(fp1);
+  
 }
 
-// writes the data memory in "data_out.mem" file
+// writes the data memory in "data_out.mc" file
 void write_data_memory()
 {
   FILE *fp;
   unsigned int i;
-  fp = fopen("data_out.mem", "w");
+  fp = fopen("data_out.mc", "w");
   if (fp == NULL)
   {
-    printf("Error opening dataout.mem file for writing\n");
+    printf("Error opening data_out.mc file for writing\n");
     return;
   }
 
   for (i = 0; i < 4000; i = i + 4)
   {
-    fprintf(fp, "%x %x\n", i+0x10000000, MEM[i+0x10000000]);
+    fprintf(fp, "0x%x 0x%x\n", i+0x10000000, MEM[i+0x10000000]);
   }
   fclose(fp);
+
+  fp = fopen("Register_file.mc", "w");
+  if (fp == NULL)
+  {
+    printf("Error opening Register_file.mc file for writing\n");
+    return;
+  }
+
+  for (int i = 0; i < 32; i++)
+  {
+    fprintf(fp, "X%d : 0x%x\n",i,X[i]);
+  }
+  fclose(fp);
+
+  cout<<endl;
+  cout<<"Register file: \n";
+  for(int i=0;i<32;i++){
+    cout<<"X"<<dec<<i<<": ";
+    cout<<hex<<"0x"<<X[i]<<endl;
+  }
 }
 
 // should be called when instruction is swi_exit
@@ -608,29 +620,31 @@ void mem()
 // writes the results back to register file
 void write_back()
 {
-  if (instruction.opcode == 19 || instruction.opcode == 51)
-  {
-    X[instruction.rd] = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
-  }
-  else if (instruction.opcode == 3)
-  {                                 // load instruction
-    X[instruction.rd] = MEM_result; // here mem result stores the M[rs1+imm] in sign extended form
-  }                                 // nothing to be done for store instruction in writeback stage
-  else if (instruction.opcode == 111)
-  { // jal instruction
-    X[instruction.rd] = pc + 4;
-  }
-  else if (instruction.opcode == 103)
-  { // jalr
-    X[instruction.rd] = pc + 4;
-  }
-  else if (instruction.opcode == 55)
-  { // lui
-    X[instruction.rd] = alu_result;
-  }
-  else if (instruction.opcode == 23)
-  { // auipc
-    X[instruction.rd] = alu_result;
+  if(instruction.rd!=0){
+    if (instruction.opcode == 19 || instruction.opcode == 51)
+    {
+      X[instruction.rd] = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
+    }
+    else if (instruction.opcode == 3)
+    {                                 // load instruction
+      X[instruction.rd] = MEM_result; // here mem result stores the M[rs1+imm] in sign extended form
+    }                                 // nothing to be done for store instruction in writeback stage
+    else if (instruction.opcode == 111)
+    { // jal instruction
+      X[instruction.rd] = pc + 4;
+    }
+    else if (instruction.opcode == 103)
+    { // jalr
+      X[instruction.rd] = pc + 4;
+    }
+    else if (instruction.opcode == 55)
+    { // lui
+      X[instruction.rd] = alu_result;
+    }
+    else if (instruction.opcode == 23)
+    { // auipc
+      X[instruction.rd] = alu_result;
+    }
   }
   clock++;
   printf("Writeback for instruction at PC 0x%x\n",pc);

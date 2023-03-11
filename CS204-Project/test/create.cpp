@@ -26,7 +26,7 @@ int main()
     fclose(fp);
     FILE *fp1;
   
-  fp1 = fopen("create1.mem", "w");
+  fp1 = fopen("create1.mc", "w");
   if (fp1 == NULL)
   {
     printf("Error opening create1 file for writing\n");
