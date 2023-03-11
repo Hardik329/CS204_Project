@@ -111,6 +111,20 @@ void load_program_memory(char *file_name)
     instruction_memory[address] = instruction;
   }
   fclose(fp);
+  FILE *fp1;
+  i=0;
+  fp1 = fopen("Register_file.mem", "w");
+  if (fp1 == NULL)
+  {
+    printf("Error opening REgister_file.mem file for writing\n");
+    return;
+  }
+
+  for (i = 0; i < 32; i++)
+  {
+    fprintf(fp1, "%d\n",X[i]);
+  }
+  fclose(fp1);
 }
 
 // writes the data memory in "data_out.mem" file
