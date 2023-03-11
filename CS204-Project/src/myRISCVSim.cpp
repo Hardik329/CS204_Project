@@ -75,7 +75,6 @@ void run_riscvsim()
 void set_instruction_bin(unsigned int a)
 {
   for(int i=0;i<32;i++) instruction.instruction_bin[i]='0';
-  cout<<"a: "<<a<<endl;
   int i = 0;
   while (a)
   {
@@ -158,9 +157,12 @@ int bin2dec(int a, int b)
 // reads from the instruction memory and updates the instruction register
 void fetch()
 {
+  if(!instruction_memory[pc/4]){
+    printf("No instruction at PC %x\n",pc);
+    swi_exit();
+  }
   instruction_word = instruction_memory[pc/4];
   set_instruction_bin(instruction_word);
-  cout<<instruction.instruction_bin<<endl;
   nextpc = pc + 4;
   if(instruction_word==0x7fffffff) swi_exit();
 
@@ -180,7 +182,6 @@ void decode()
   instruction.func7 = bin2dec(25, 31);
 
   int opcode = instruction.opcode;
-  cout<<"opcode:"<<opcode<<endl;
 
   switch (opcode)
   {
@@ -256,6 +257,12 @@ void decode()
   }
 
   printf("Decoded a %c type instruction at PC 0x%x\n",instruction.type,pc);
+  cout<<"opcode:"<<opcode<<endl;
+  printf("func3: %d\n",instruction.func3);
+  printf("func7: %d\n",instruction.func7);
+  printf("immediate: %d\n",instruction.immediate);
+  printf("rs1: %d\n",instruction.rs1);
+  printf("rs2: %d\n\n",instruction.rs2);
 
   
 }
@@ -332,7 +339,7 @@ void execute()
   {
     operand2 = instruction.immediate;
 
-    if (instruction.func3 == 0 && instruction.func7 == 0) // addi
+    if (instruction.func3 == 0) // addi
     {
       name = "ADDI";
       alu_result = operand1 + operand2;
@@ -610,10 +617,10 @@ void write_back()
   }
   clock++;
   printf("Writeback for instruction at PC 0x%x\n",pc);
-  printf("Instruction info: %s instruction\n",instruction.name);
+  cout<<"Instruction info: "<<instruction.name<<" instruction\n";
   pc=nextpc;
 
-  printf("Clock cycle: %d",clock);
+  printf("Clock cycle: %d\n\n",clock);
 
   
 }
