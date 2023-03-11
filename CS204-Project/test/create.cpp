@@ -35,7 +35,7 @@ int main()
 
   for (int i = 0; i < address; i = i + 4)
   {
-    fprintf(fp, "0x%x %08x\n", i, instruction_memory[i]);
+    fprintf(fp1, "0x%x %08x\n", i, instruction_memory[i]);
   }
-  fclose(fp);
+  fclose(fp1);
 }
