@@ -636,7 +636,7 @@ void write_back()
   printf("Writeback for instruction at PC 0x%x\n",pc);
   cout<<"Instruction info: "<<instruction.name<<" instruction\n";
   pc=nextpc;
-
+  X[0]=0;//x0 register always zero
   printf("\nClock cycle: %d\n\n\n",clock);
 
   
