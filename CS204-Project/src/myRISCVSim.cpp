@@ -141,7 +141,7 @@ void write_data_memory()
 
   for (i = 0; i < 4000; i = i + 4)
   {
-    fprintf(fp, "%x %x\n", i, MEM[i]);
+    fprintf(fp, "%x %x\n", i+0x10000000, MEM[i+0x10000000]);
   }
   fclose(fp);
 }
