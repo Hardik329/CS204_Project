@@ -90,10 +90,8 @@ void reset_proc()
 {
   for (int i = 0; i < 32; i++)
     X[i] = 0;
-  for (int i = 0; i < 1000; i++)
-    MEM[i] = 0;
-  for (int i = 0; i < 1000; i++)
-    instruction_memory[i] = 0;
+  MEM.clear();
+  instruction_memory.clear();
 }
 
 // load_program_memory reads the input memory, and populates the instruction
@@ -110,7 +108,7 @@ void load_program_memory(char *file_name)
   }
   while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
   {
-    instruction_memory[address/4] = instruction;
+    instruction_memory[address] = instruction;
   }
   fclose(fp);
 }
@@ -129,7 +127,7 @@ void write_data_memory()
 
   for (i = 0; i < 4000; i = i + 4)
   {
-    fprintf(fp, "%x %x\n", i, MEM[i/4]);
+    fprintf(fp, "%x %x\n", i, MEM[i]);
   }
   fclose(fp);
 }
@@ -154,17 +152,22 @@ int bin2dec(int a, int b)
   return ans;
 }
 
+
+
 // reads from the instruction memory and updates the instruction register
 void fetch()
 {
-  if(!instruction_memory[pc/4]){
-    printf("No instruction at PC %x\n",pc);
+  instruction_word = instruction_memory[pc];
+  if(instruction_word==0xffffffff) {
+    printf("Exiting...\n");
     swi_exit();
   }
-  instruction_word = instruction_memory[pc/4];
+  if(!instruction_memory[pc]){
+    printf("No instruction at PC 0x%x\n",pc);
+    swi_exit();
+  }
   set_instruction_bin(instruction_word);
   nextpc = pc + 4;
-  if(instruction_word==0x7fffffff) swi_exit();
 
   printf("Fetched instruction at PC 0x%x\n",pc);
 }
@@ -620,7 +623,7 @@ void write_back()
   cout<<"Instruction info: "<<instruction.name<<" instruction\n";
   pc=nextpc;
 
-  printf("Clock cycle: %d\n\n",clock);
+  printf("\nClock cycle: %d\n\n\n",clock);
 
   
 }
