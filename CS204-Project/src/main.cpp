@@ -21,6 +21,7 @@ Date:
 #include <stdlib.h>
 
 int main(int argc, char** argv) {
+  freopen("./output.txt","w",stdout);
   char* prog_mem_file; 
   if(argc < 2) {
     printf("Incorrect number of arguments. Please invoke the simulator \n\t./myRISCVSim <input mem file> \n");

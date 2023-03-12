@@ -15,7 +15,6 @@ Date:
 */
 
 #include "myRISCVSim.h"
-#include <stdio.h>
 #include <unordered_map>
 #include <math.h>
 #include <string.h>
@@ -195,7 +194,7 @@ void fetch()
   set_instruction_bin(instruction_word);
   nextpc = pc + 4;
 
-  printf("Fetched instruction at PC 0x%x\n",pc);
+  printf("FETCH: Fetched instruction 0x%x from PC 0x%x\n",instruction_word,pc);
 }
 
 
@@ -285,13 +284,14 @@ void decode()
     break;
   }
 
-  printf("Decoded a %c type instruction at PC 0x%x\n",instruction.type,pc);
+  printf("DECODE:\nOperation is %c type\n",instruction.type);
   cout<<"opcode:"<<opcode<<endl;
   printf("func3: %d\n",instruction.func3);
   printf("func7: %d\n",instruction.func7);
-  printf("immediate: %d\n",instruction.immediate);
-  printf("rs1: %d\n",instruction.rs1);
-  printf("rs2: %d\n\n",instruction.rs2);
+  printf("rs1: X%d\n",instruction.rs1);
+  printf("rs2: X%d\n",instruction.rs2);
+  printf("rd: X%d\n",instruction.rd);
+  printf("immediate: 0x%x\n",instruction.immediate);
 
   
 }
@@ -449,7 +449,7 @@ void execute()
     break;
   }
   }
-  printf("Executed instruction at PC 0x%x\n",pc);
+  cout<<"EXECUTE: Executed "<<instruction.name<<" operation\n";
 
 }
 // perform the memory operation
@@ -613,44 +613,61 @@ void mem()
     }
   }
 
-  else return;
+  else {
+    printf("MEMORY: Memory not accessed\n");
+    return;
+  }
 
-  printf("Memory accessed for instruction at PC 0x%x\n",pc);
+  printf("MEMORY: Memory accessed for instruction at PC 0x%x\n",pc);
 }
 // writes the results back to register file
+int wb_result;
 void write_back()
 {
+  bool write = 0;
+
   if(instruction.rd!=0){
     if (instruction.opcode == 19 || instruction.opcode == 51)
     {
-      X[instruction.rd] = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
+      wb_result = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
+      write = 1;
     }
     else if (instruction.opcode == 3)
     {                                 // load instruction
-      X[instruction.rd] = MEM_result; // here mem result stores the M[rs1+imm] in sign extended form
-    }                                 // nothing to be done for store instruction in writeback stage
+      wb_result = MEM_result;         // here mem result stores the MEM[rs1+imm] in sign extended form
+      write = 1;
+    }                                 
+    // nothing to be done for store instruction in writeback stage                         
     else if (instruction.opcode == 111)
     { // jal instruction
-      X[instruction.rd] = pc + 4;
+      wb_result = pc + 4;
+      write = 1;
     }
     else if (instruction.opcode == 103)
     { // jalr
-      X[instruction.rd] = pc + 4;
+      write = 1;
+      wb_result = pc + 4;
     }
     else if (instruction.opcode == 55)
     { // lui
-      X[instruction.rd] = alu_result;
+      write = 1;
+      wb_result = alu_result;
     }
     else if (instruction.opcode == 23)
     { // auipc
-      X[instruction.rd] = alu_result;
+      write = 1;
+      wb_result = alu_result;
     }
   }
+  if(write){
+    X[instruction.rd] = wb_result;
+    printf("WRITEBACK: Write 0x%x to X%d\n",wb_result,instruction.rd);
+
+  }
+  else printf("WRITEBACK: No Writeback\n");
   clock++;
-  printf("Writeback for instruction at PC 0x%x\n",pc);
-  cout<<"Instruction info: "<<instruction.name<<" instruction\n";
-  pc=nextpc;
-  X[0]=0;//x0 register always zero
+  pc = nextpc;
+  X[0] = 0;//x0 register always zero
   printf("\nClock cycle: %d\n\n\n",clock);
 
   
