@@ -16,7 +16,7 @@ Date:
 */
 
 
-#include "myRISCVSim.h"
+#include "../include/myRISCVSim.h"
 #include <stdio.h>
 #include <stdlib.h>
 

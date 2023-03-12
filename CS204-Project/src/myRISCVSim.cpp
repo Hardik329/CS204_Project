@@ -14,34 +14,37 @@ Date:
    Purpose of this file: implementation file for myRISCVSim
 */
 
-#include "myRISCVSim.h"
+#include "../include/myRISCVSim.h"
 #include <unordered_map>
 #include <math.h>
 #include <string.h>
 #include <string>
 #include <iostream>
 
+#define _CRT_SECURE_NO_WARNINGS
+
+
 using namespace std;
 
 // Register file
-static int X[32];
+ int X[32];
 // flags
 
 // memory
-static unordered_map<unsigned int,int> instruction_memory;
+ unordered_map<unsigned int,int> instruction_memory;
 
-static unordered_map<unsigned int,int> MEM;
+ unordered_map<unsigned int,int> MEM;
 
 
 // intermediate datapath and control path signals
-static unsigned int instruction_word;
-static unsigned int operand1;
-static unsigned int operand2;
+ unsigned int instruction_word;
+ unsigned int operand1;
+ unsigned int operand2;
 
 int alu_result = 0;
 
 int pc = 0, nextpc = 0;
-int clock = 0;
+int clk = 0;
 
 
 struct instruction_set
@@ -429,13 +432,6 @@ void execute()
     nextpc = pc + instruction.immediate;
     break;
   }
-  case 103: // jalr
-  {
-    name = "JALR";
-    alu_result = operand1 + instruction.immediate;
-    nextpc = alu_result;
-    break;
-  }
   case 55: // lui
   {
     name = "LUI";
@@ -665,10 +661,10 @@ void write_back()
 
   }
   else printf("WRITEBACK: No Writeback\n");
-  clock++;
+  clk++;
   pc = nextpc;
   X[0] = 0;//x0 register always zero
-  printf("\nClock cycle: %d\n\n\n",clock);
+  printf("\nClock cycle: %d\n\n\n",clk);
 
   
 }
