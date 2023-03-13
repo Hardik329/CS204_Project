@@ -4,12 +4,20 @@ Functional Simulator for subset of RISCV Processor
 
 README
 
+This is the final project of CS204 - Computer Architecture Course. The project involves building a RISCV-32 Simulator. All the code is written in C++. 
+
 Table of contents
+1. Group Members
 1. Directory Structure
 2. How to build
 3. How to execute
 
+Group Members
 
+1. <p> Hardik Aggarwal</p>
+2. <p> Komalpreet Singh</p>
+3. <p> Ritesh Mohan Patil</p>
+4. <p> Edgar Aditya Thorpe</p>
 
 Directory Structure:
 --------------------
