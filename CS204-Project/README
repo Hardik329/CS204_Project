@@ -47,5 +47,5 @@ For cleaning the project:
 How to execute
 --------------
 cd bin
-./myARMSim test/array_add.mem
+./myRISCVSim ../test/array_add.mc
 
