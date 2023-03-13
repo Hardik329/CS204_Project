@@ -1,5 +1,5 @@
 ================================================
-Functional Simulator for subset of ARM Processor
+Functional Simulator for subset of RISCV Processor
 ================================================
 
 README
@@ -13,24 +13,24 @@ Table of contents
 
 Directory Structure:
 --------------------
-CS112-Project
+CS204-Project
   |
   |- bin
       |
-      |- myARMSim
+      |- myRISCVSim
   |- doc
       |
       |- design-doc.docx
   |- include
       |
-      |- myARMSim.h
+      |- myRISCVSim.h
   |- src
       |- main.c
       |- Makefile
-      |- myARMSim.h
+      |- myRISCVSim.h
   |- test
       |- simple_add.mem
-      |- fib.mem
+      |- Fibonacci_Series.mem
       |- array_add.mem
 
 How to build
