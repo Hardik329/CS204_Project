@@ -105,7 +105,7 @@ void reset_proc()
 //  memory
 void load_program_memory(char *file_name)
 {
-  FILE *fp;
+    FILE *fp;
   unsigned int address, instruction;
   fp = fopen(file_name, "r");
   if (fp == NULL)
@@ -115,8 +115,20 @@ void load_program_memory(char *file_name)
   }
   while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
   {
-    instruction_memory[address] = instruction;
+    if(instruction!=0x7fffffff){
+      instruction_memory[address] = instruction;
+    }
+    else{
+      break;
+    }
+    
   }
+  int data;
+  while (fscanf(fp, "%x %x", &address, &data) != EOF)
+  {
+    MEM[address]=data;
+  }
+
   fclose(fp);
   
 }
