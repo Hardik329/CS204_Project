@@ -403,8 +403,25 @@ void execute()
   }
   case 99: // branch instructions  beq,bne,bge,blt
   {
+    //handling overflow conditions
+    bool overflow = false;
     alu_result = operand1 - operand2;
-    if (instruction.func3 == 0 && alu_result == 0)  // beq
+    
+    if(operand1>2147483648 && operand2>0)   
+    {
+      if(alu_result>0)
+      {
+        overflow=true;
+      }
+    }
+    if(operand1>2147483648 && operand2>2147483648)
+    {
+      if(alu_result>0)
+      {
+        overflow=false;
+      }
+    }
+    if (instruction.func3 == 0 && alu_result == 0 )  // beq
     {
       name = "BEQ";
       nextpc = pc + instruction.immediate;
@@ -414,22 +431,28 @@ void execute()
       name = "BNE";
       nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 4 && alu_result < 0) // blt
+    else if (instruction.func3 == 4 && ((alu_result < 0) || (overflow==true))) // blt
     {
       name = "BLT";
       nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 5 && alu_result >= 0) // bge
+    else if (instruction.func3 == 5 && alu_result >= 0 && overflow==false) // bge
     {name = "BGE";
       nextpc = pc + instruction.immediate;
     }
-
     break;
   }
   case 111: // jal
   {
     name = "JAL";
     nextpc = pc + instruction.immediate;
+    break;
+  }
+  case 103: // jalr
+  {
+    name = "JALR";
+    alu_result = operand1 + instruction.immediate;
+    nextpc = alu_result;
     break;
   }
   case 55: // lui
