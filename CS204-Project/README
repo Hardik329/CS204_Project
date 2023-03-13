@@ -46,5 +46,6 @@ For cleaning the project:
 
 How to execute
 --------------
-./myARMSim test/simple_add.mem
+cd bin
+./myARMSim test/array_add.mem
 
