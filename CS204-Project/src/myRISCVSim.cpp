@@ -27,7 +27,7 @@ Date:
 using namespace std;
 
 // Register file
- int X[32];
+int X[32];
 // flags
 
 // memory
@@ -94,7 +94,7 @@ void reset_proc()
   for (int i = 0; i < 32; i++)
     X[i] = 0;
 
-  X[2] = 0x7ffffffc; // stack pointer
+  X[2] = 0x7ffffff0; // stack pointer
   X[3] = 0x10000000; // global pointer
 
   MEM.clear();
@@ -436,17 +436,17 @@ void execute()
     if (instruction.func3 == 0 && alu_result == 0 )  // beq
     {
       name = "BEQ";
-      nextpc = pc + instruction.immediate;
+      if(alu_result == 0) nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 1 && alu_result != 0) // bne
+    else if (instruction.func3 == 1) // bne
     {
       name = "BNE";
-      nextpc = pc + instruction.immediate;
+      if(alu_result != 0) nextpc = pc + instruction.immediate;
     }
     else if (instruction.func3 == 4 && ((alu_result < 0) || (overflow==true))) // blt
     {
       name = "BLT";
-      nextpc = pc + instruction.immediate;
+      if(alu_result < 0) nextpc = pc + instruction.immediate;
     }
     else if (instruction.func3 == 5 && alu_result >= 0 && overflow==false) // bge
     {name = "BGE";
@@ -454,6 +454,7 @@ void execute()
     }
     break;
   }
+  
   case 111: // jal
   {
     name = "JAL";
@@ -641,6 +642,7 @@ void mem()
     else if (instruction.func3 == 2)
     {
       MEM[alu_result] = X[instruction.rs2];
+      MEM_result = MEM[alu_result];
     }
   }
 
@@ -649,7 +651,7 @@ void mem()
     return;
   }
 
-  printf("MEMORY: Memory accessed for instruction at PC 0x%x\n",pc);
+  printf("MEMORY: Memory accessed for instruction at PC 0x%x having value 0x%x\n",pc,MEM_result);
 }
 // writes the results back to register file
 int wb_result;
