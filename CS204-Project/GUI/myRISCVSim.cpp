@@ -4,8 +4,8 @@
 The project is developed as part of Computer Architecture class
 Project Name: Functional Simulator for subset of RISCV Processor
 
-Developer's Name: Hardik Aggarwal, Komalpreet Singh, Ritesh Patil, Edgar Aditya Thorpe
-Developer's Email id: 2021csb1173@iitrpr.ac.in, 2021csb1237@iitrpr.ac.in, 2021csb1120@iitrpr.ac.in, 2021csb1169@iitrpr.ac.in
+Developer's Name:
+Developer's Email id:
 Date:
 
 */
@@ -14,12 +14,15 @@ Date:
    Purpose of this file: implementation file for myRISCVSim
 */
 
-#include "../include/myRISCVSim.h"
+#include "myRISCVSim.h"
 #include <unordered_map>
 #include <math.h>
 #include <string.h>
 #include <string>
 #include <iostream>
+#include <fstream>
+#include <sstream>
+
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -28,6 +31,8 @@ using namespace std;
 
 // Register file
 int X[32];
+
+bool exit_bool = 0;
 // flags
 
 // memory
@@ -68,6 +73,7 @@ void run_riscvsim()
   while (1)
   {
     fetch();
+    if(exit_bool) return;
     decode();
     execute();
     mem();
@@ -91,6 +97,7 @@ void set_instruction_bin(unsigned int a)
 // reset all registers and memory content to 0
 void reset_proc()
 {
+  exit_bool = 0;
   for (int i = 0; i < 32; i++)
     X[i] = 0;
 
@@ -105,32 +112,28 @@ void reset_proc()
 //  memory
 void load_program_memory(char *file_name)
 {
-    FILE *fp;
-  unsigned int address, instruction;
-  fp = fopen(file_name, "r");
-  if (fp == NULL)
-  {
-    printf("Error opening input .mc file\n");
-    exit(1);
-  }
-  while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
-  {
-    if(instruction!=0x7fffffff){
-      instruction_memory[address] = instruction;
-    }
-    else{
-      break;
-    }
-    
-  }
-  int data;
-  while (fscanf(fp, "%x %x", &address, &data) != EOF)
-  {
-    MEM[address]=data;
-  }
 
-  fclose(fp);
-  
+  unsigned int address, instruction;
+
+  ifstream fin;
+
+      // by default open mode = ios::in mode
+      fin.open(file_name);
+      string line;
+
+      // Execute a loop until EOF (End of File)
+      while (getline(fin, line)) {
+
+          // Print line (read from file) in Console
+          std::stringstream ssdd(line);
+          ssdd>>hex>>address;
+          ssdd>>hex>>instruction;
+          instruction_memory[address] = instruction;
+      }
+      fin.close();
+
+
+
 }
 
 // writes the data memory in "data_out.mc" file
@@ -165,13 +168,19 @@ void write_data_memory()
   fclose(fp);
 
   cout<<endl;
+  cout<<"Register file: \n";
+  for(int i=0;i<32;i++){
+    cout<<"X"<<dec<<i<<": ";
+    cout<<hex<<"0x"<<X[i]<<endl;
+  }
 }
 
 // should be called when instruction is swi_exit
 void swi_exit()
 {
   write_data_memory();
-  exit(0);
+  exit_bool = 1;
+  return;
 }
 
 int bin2dec(int a, int b)
@@ -199,9 +208,9 @@ void fetch()
   }
   if(!instruction_memory[pc]){
     printf("No instruction at PC 0x%x\n",pc);
-    printf("Exiting...\n");
     swi_exit();
   }
+  if(exit_bool) return;
   set_instruction_bin(instruction_word);
   nextpc = pc + 4;
 
@@ -411,25 +420,8 @@ void execute()
   }
   case 99: // branch instructions  beq,bne,bge,blt
   {
-    //handling overflow conditions
-    bool overflow = false;
     alu_result = operand1 - operand2;
-    
-    if(operand1>2147483648 && operand2>0)   
-    {
-      if(alu_result>0)
-      {
-        overflow=true;
-      }
-    }
-    if(operand1>2147483648 && operand2>2147483648)
-    {
-      if(alu_result>0)
-      {
-        overflow=false;
-      }
-    }
-    if (instruction.func3 == 0 && alu_result == 0 )  // beq
+    if (instruction.func3 == 0)  // beq
     {
       name = "BEQ";
       if(alu_result == 0) nextpc = pc + instruction.immediate;
@@ -439,29 +431,31 @@ void execute()
       name = "BNE";
       if(alu_result != 0) nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 4 && ((alu_result < 0) || (overflow==true))) // blt
+    else if (instruction.func3 == 4) // blt
     {
       name = "BLT";
       if(alu_result < 0) nextpc = pc + instruction.immediate;
     }
-    else if (instruction.func3 == 5 && alu_result >= 0 && overflow==false) // bge
-    {name = "BGE";
-      nextpc = pc + instruction.immediate;
+    else if (instruction.func3 == 5) // bge
+    {
+      name = "BGE";
+      if(alu_result >= 0) nextpc = pc + instruction.immediate;
     }
+
     break;
   }
-  
+  case 103:
+  {
+    if(instruction.func3 == 0){
+      name = "JALR";
+      alu_result = operand1 + instruction.immediate;
+      nextpc = alu_result;
+    }
+  }
   case 111: // jal
   {
     name = "JAL";
     nextpc = pc + instruction.immediate;
-    break;
-  }
-  case 103: // jalr
-  {
-    name = "JALR";
-    alu_result = operand1 + instruction.immediate;
-    nextpc = alu_result;
     break;
   }
   case 55: // lui

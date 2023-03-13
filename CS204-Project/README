@@ -37,9 +37,9 @@ CS204-Project
       |- Makefile
       |- myRISCVSim.h
   |- test
-      |- simple_add.mem
-      |- Fibonacci_Series.mem
-      |- array_add.mem
+      |- bubble_sort.mc
+      |- fib.mc
+      |- array_add.mc
 
 How to build
 ------------

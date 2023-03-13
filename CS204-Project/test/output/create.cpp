@@ -12,7 +12,7 @@ int main()
     unsigned int address, instruction;
     address=0;
     //int array[4000];
-    fp = fopen("R.txt", "r");
+    fp = fopen("input.txt", "r");
     if (fp == NULL)
     {
         printf("Error opening input R file\n");
@@ -26,7 +26,7 @@ int main()
     fclose(fp);
     FILE *fp1;
   
-  fp1 = fopen("created.mc", "w");
+  fp1 = fopen("output.mc", "w");
   if (fp1 == NULL)
   {
     printf("Error opening create1 file for writing\n");
