@@ -1,13 +1,9 @@
-
 /*
-
 The project is developed as part of Computer Architecture class
 Project Name: Functional Simulator for subset of RISCV Processor
-
 Developer's Name: Hardik Aggarwal, Komalpreet Singh, Ritesh Patil, Edgar Aditya Thorpe
 Developer's Email id: 2021csb1173@iitrpr.ac.in, 2021csb1237@iitrpr.ac.in, 2021csb1120@iitrpr.ac.in, 2021csb1169@iitrpr.ac.in
 Date:
-
 */
 
 /* myRISCVSim.cpp
@@ -20,76 +16,7 @@ Date:
 #include <string.h>
 #include <string>
 #include <iostream>
-
-
-struct fetch_register{
-  
-  struct instruction_set
-  {
-
-    char instruction_bin[32];
-    int rs1, rs2;
-    int rd;
-    char opcode;
-    int immediate;
-    int func3, func7;
-    char type;
-    string name;
-
-
-  } instruction;
-
-  int pc;
-
-
-}fetch_reg;
-
-struct decode_register{
-
-  unsigned int operand1;
-  unsigned int operand2;
-  int pc;
-
-}decode_reg;
-
-struct execute_register{
-  
-  int pc;
-  int operand2;
-  int alu_result;
-
-}execute_reg;
-
-struct memory_register{
-
-  int MEM_result = 0;
-  int pc;
-}memory_reg;
-
-
-
-
-using namespace std;
-
-// Register file
-int X[32];
-
-// memory
- unordered_map<unsigned int,int> instruction_memory;
-
- unordered_map<unsigned int,int> MEM;
-
-
-// intermediate datapath and control path signals
- unsigned int instruction_word;
-
-
-int alu_result = 0;
-
-int pc = 0, nextpc = 0;
-int clk = 0;
-
-
+#include <stdio.h>
 struct instruction_set
 {
 
@@ -102,29 +29,103 @@ struct instruction_set
   char type;
   string name;
 
-
 } instruction;
+unsigned int operand1;
+unsigned int operand2;
+int pipeline;
 
+struct fetch_register
+{
+
+  struct instruction_set instruction1;
+
+  int pc;
+
+} fetch_reg;
+
+struct decode_register
+{
+
+  int pc;
+  struct instruction_set instruction;
+
+} decode_reg;
+
+struct execute_register
+{
+
+  int pc;
+  int operand2;
+  struct instruction_set instruction;
+  int alu_result;
+
+} execute_reg;
+
+struct memory_register
+{
+
+  int MEM_result = 0;
+  struct instruction_set instruction;
+  int pc;
+} memory_reg;
+
+using namespace std;
+
+// Register file
+int X[32];
+
+// memory
+unordered_map<unsigned int, int> instruction_memory;
+
+unordered_map<unsigned int, int> MEM;
+
+// intermediate datapath and control path signals
+unsigned int instruction_word;
+
+int alu_result = 0;
+
+int pc = 0, nextpc = 0;
+int clk = 0;
 
 void run_riscvsim()
 {
-  while (1)
+  if (!pipeline)
   {
-    fetch();
-    decode();
-    execute();
-    mem();
-    write_back();
+    while (1)
+    {
+      fetch();
+      decode();
+      execute();
+      mem();
+      write_back();
+    }
+  }
+  else
+  {
+    memory_reg.instruction.rd=0;
+    fetch_reg.instruction1.rd=0;
+    execute_reg.instruction.rd=0;
+    decode_reg.instruction.rd=0;
+    while (1)
+    {
+      write_back();
+      mem();
+      execute();
+      decode();
+      fetch();
+    }
   }
 }
 
 void set_instruction_bin(unsigned int a)
 {
-  for(int i=0;i<32;i++) instruction.instruction_bin[i]='0';
+  for (int i = 0; i < 32; i++)
+    instruction.instruction_bin[i] = '0';
   int i = 0;
   while (a)
   {
-    if(a%2==1) instruction.instruction_bin[i]='1';
+    if (a % 2 == 1)
+      instruction.instruction_bin[i] = '1';
     a /= 2;
     i++;
   }
@@ -148,7 +149,7 @@ void reset_proc()
 //  memory
 void load_program_memory(char *file_name)
 {
-    FILE *fp;
+  FILE *fp;
   unsigned int address, instruction;
   fp = fopen(file_name, "r");
   if (fp == NULL)
@@ -158,22 +159,22 @@ void load_program_memory(char *file_name)
   }
   while (fscanf(fp, "%x %x", &address, &instruction) != EOF)
   {
-    if(instruction!=0xffffffff){
+    if (instruction != 0xffffffff)
+    {
       instruction_memory[address] = instruction;
     }
-    else{
+    else
+    {
       break;
     }
-    
   }
   int data;
   while (fscanf(fp, "%x %x", &address, &data) != EOF)
   {
-    MEM[address]=data;
+    MEM[address] = data;
   }
 
   fclose(fp);
-  
 }
 
 // writes the data memory in "data_out.mc" file
@@ -190,7 +191,7 @@ void write_data_memory()
 
   for (i = 0; i < 4000; i = i + 4)
   {
-    fprintf(fp, "0x%x 0x%x\n", i+0x10000000, MEM[i+0x10000000]);
+    fprintf(fp, "0x%x 0x%x\n", i + 0x10000000, MEM[i + 0x10000000]);
   }
   fclose(fp);
 
@@ -203,11 +204,11 @@ void write_data_memory()
 
   for (int i = 0; i < 32; i++)
   {
-    fprintf(fp, "X%d : 0x%x\n",i,X[i]);
+    fprintf(fp, "X%d : 0x%x\n", i, X[i]);
   }
   fclose(fp);
 
-  cout<<endl;
+  cout << endl;
 }
 
 // should be called when instruction is swi_exit
@@ -230,31 +231,34 @@ int bin2dec(int a, int b)
   return ans;
 }
 
-
-
 // reads from the instruction memory and updates the instruction register
 void fetch()
 {
   instruction_word = instruction_memory[pc];
-  if(instruction_word==0xffffffff) {
+  if (instruction_word == 0xffffffff)
+  {
     printf("Exiting...\n");
     swi_exit();
   }
-  if(!instruction_memory[pc]){
-    printf("No instruction at PC 0x%x\n",pc);
+  if (!instruction_memory[pc])
+  {
+    printf("No instruction at PC 0x%x\n", pc);
     printf("Exiting...\n");
     swi_exit();
   }
   set_instruction_bin(instruction_word);
   nextpc = pc + 4;
 
-  printf("FETCH: Fetched instruction 0x%x from PC 0x%x\n",instruction_word,pc);
+  printf("FETCH: Fetched instruction 0x%x from PC 0x%x\n", instruction_word, pc);
 }
-
 
 // reads the instruction register, reads operand1, operand2 fromo register file, decides the operation to be performed in execute stage
 void decode()
 {
+  if (pipeline)
+  {
+    instruction = fetch_reg.instruction1;
+  }
 
   instruction.opcode = bin2dec(0, 6);
   instruction.rd = bin2dec(7, 11);
@@ -332,28 +336,35 @@ void decode()
       instruction.immediate = bin2dec(12, 31);
     }
     else if (instruction.instruction_bin[31] == '1')
-    { 
+    {
       instruction.immediate = (bin2dec(12, 31)) - pow(2, 20);
     }
     break;
   }
 
-  printf("DECODE:\nOperation is %c type\n",instruction.type);
-  cout<<"opcode:"<<opcode<<endl;
-  printf("func3: %d\n",instruction.func3);
-  printf("func7: %d\n",instruction.func7);
-  printf("rs1: X%d\n",instruction.rs1);
-  printf("rs2: X%d\n",instruction.rs2);
-  printf("rd: X%d\n",instruction.rd);
-  printf("immediate: 0x%x\n",instruction.immediate);
-
-  
+  printf("DECODE:\nOperation is %c type\n", instruction.type);
+  cout << "opcode:" << opcode << endl;
+  printf("func3: %d\n", instruction.func3);
+  printf("func7: %d\n", instruction.func7);
+  printf("rs1: X%d\n", instruction.rs1);
+  printf("rs2: X%d\n", instruction.rs2);
+  printf("rd: X%d\n", instruction.rd);
+  printf("immediate: 0x%x\n", instruction.immediate);
+  if (pipeline)
+  {
+    execute_reg.instruction = instruction;
+    execute_reg.pc = fetch_reg.pc;
+  }
 }
 
 // executes the ALU operation based on ALUop
 void execute()
 {
   // instruction is the structure instance
+  if (pipeline)
+  {
+    instruction = decode_reg.instruction;
+  }
   operand1 = X[instruction.rs1];
   operand2 = X[instruction.rs2];
   string &name = instruction.name;
@@ -454,47 +465,51 @@ void execute()
   }
   case 99: // branch instructions  beq,bne,bge,blt
   {
-    //handling overflow conditions
+    // handling overflow conditions
     bool overflow = false;
     alu_result = operand1 - operand2;
-    
-    if(operand1>2147483648 && operand2>0)   
+
+    if (operand1 > 2147483648 && operand2 > 0)
     {
-      if(alu_result>0)
+      if (alu_result > 0)
       {
-        overflow=true;
+        overflow = true;
       }
     }
-    if(operand1>2147483648 && operand2>2147483648)
+    if (operand1 > 2147483648 && operand2 > 2147483648)
     {
-      if(alu_result>0)
+      if (alu_result > 0)
       {
-        overflow=false;
+        overflow = false;
       }
     }
-    if (instruction.func3 == 0)  // beq
+    if (instruction.func3 == 0) // beq
     {
       name = "BEQ";
-      if(alu_result == 0) nextpc = pc + instruction.immediate;
+      if (alu_result == 0)
+        nextpc = pc + instruction.immediate;
     }
     else if (instruction.func3 == 1) // bne
     {
       name = "BNE";
-      if(alu_result != 0) nextpc = pc + instruction.immediate;
+      if (alu_result != 0)
+        nextpc = pc + instruction.immediate;
     }
     else if (instruction.func3 == 4) // blt
     {
       name = "BLT";
-      if((alu_result < 0) || (overflow==true)) nextpc = pc + instruction.immediate;
+      if ((alu_result < 0) || (overflow == true))
+        nextpc = pc + instruction.immediate;
     }
     else if (instruction.func3 == 5) // bge
     {
       name = "BGE";
-      if(alu_result >= 0 && overflow==false) nextpc = pc + instruction.immediate;
+      if (alu_result >= 0 && overflow == false)
+        nextpc = pc + instruction.immediate;
     }
     break;
   }
-  
+
   case 111: // jal
   {
     name = "JAL";
@@ -521,13 +536,22 @@ void execute()
     break;
   }
   }
-  cout<<"EXECUTE: Executed "<<instruction.name<<" operation\n";
-
+  cout << "EXECUTE: Executed " << instruction.name << " operation\n";
+  if (pipeline)
+  {
+    execute_reg.instruction = instruction;
+    execute_reg.alu_result = alu_result;
+  }
 }
 // perform the memory operation
+int MEM_result = 0;
 
 void mem()
 {
+  if (pipeline)
+  {
+    instruction = execute_reg.instruction;
+  }
   if (instruction.opcode == 3)
   { // mem for load instruction
     if (instruction.func3 == 0)
@@ -585,9 +609,9 @@ void mem()
       MEM_result = MEM[alu_result];
     }
   }
-  
+
   else if (instruction.opcode == 35)
-  {                                        //store memory access
+  { // store memory access
     MEM_result = 0;
     if (instruction.func3 == 0)
     {
@@ -686,62 +710,69 @@ void mem()
     }
   }
 
-  else {
+  else
+  {
     printf("MEMORY: Memory not accessed\n");
     return;
   }
 
-  printf("MEMORY: Memory accessed for instruction at PC 0x%x having value 0x%x\n",pc,MEM_result);
+  printf("MEMORY: Memory accessed for instruction at PC 0x%x having value 0x%x\n", pc, MEM_result);
+  if (pipeline)
+  {
+    memory_reg.instruction = instruction;
+    memory_reg.MEM_result = MEM_result;
+  }
 }
+
 // writes the results back to register file
-int wb_result;
+int result;
+
 void write_back()
 {
+  if (pipeline)
+  {
+    instruction = memory_reg.instruction;
+  }
+
   bool write = 0;
 
-  if(instruction.rd!=0){
-    if (instruction.opcode == 19 || instruction.opcode == 51)    
+  if (instruction.rd != 0)
+  {
+    if (instruction.opcode == 19 || instruction.opcode == 51)
     {
-      wb_result = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
+      result = alu_result; // the MEM and wb buffer registers(storing required data for wb stage)
       write = 1;
     }
     else if (instruction.opcode == 3)
-    {                                 // load instruction
-      wb_result = MEM_result;         // here mem result stores the MEM[rs1+imm] in sign extended form
+    {                      // load instruction
+      result = MEM_result; // here mem result stores the MEM[rs1+imm] in sign extended form
       write = 1;
-    }                                 
-    // nothing to be done for store instruction in writeback stage                         
+    }
+    // nothing to be done for store instruction in writeback stage
     else if (instruction.opcode == 111)
     { // jal instruction
-      wb_result = pc + 4;
+      result = pc + 4;
       write = 1;
     }
     else if (instruction.opcode == 103)
     { // jalr
       write = 1;
-      wb_result = pc + 4;
+      result = pc + 4;
     }
     else if (instruction.opcode == 55)
     { // lui
       write = 1;
-      wb_result = alu_result;
+      result = alu_result;
     }
     else if (instruction.opcode == 23)
     { // auipc
       write = 1;
-      wb_result = alu_result;
+      result = alu_result;
     }
   }
-  if(write){
-    X[instruction.rd] = wb_result;
-    printf("WRITEBACK: Write 0x%x to X%d\n",wb_result,instruction.rd);
-
+  if (write)
+  {
+    X[instruction.rd] = result;
+    printf("WRITEBACK: Write 0x%x to X%d\n", result, instruction.rd);
   }
-  else printf("WRITEBACK: No Writeback\n");
-  clk++;
-  pc = nextpc;
-  X[0] = 0;//x0 register always zero
-  printf("\nClock cycle: %d\n\n\n",clk);
-
-  
 }
