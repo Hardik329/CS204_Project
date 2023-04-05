@@ -1,105 +1,268 @@
-FETCH: Fetched instruction 0x3400213 from PC 0x0
+-1
+FETCH: Fetched instruction 0x33 from PC 0xffffffff
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
 DECODE:
-Operation is I type
-opcode:19
-func3: 0
-func7: 1
-rs1: X0
-rs2: X20
-rd: X4
-immediate: 0x34
-EXECUTE: Executed ADDI operation
-MEMORY: Memory not accessed
-WRITEBACK: Write 0x34 to X4
-
-Clock cycle: 1
-
-
-FETCH: Fetched instruction 0x1400293 from PC 0x4
-DECODE:
-Operation is I type
-opcode:19
+Operation is R type
+opcode:51
 func3: 0
 func7: 0
 rs1: X0
-rs2: X20
-rd: X5
-immediate: 0x14
-EXECUTE: Executed ADDI operation
-MEMORY: Memory not accessed
-WRITEBACK: Write 0x14 to X5
-
-Clock cycle: 2
-
-
-FETCH: Fetched instruction 0x525463 from PC 0x8
-DECODE:
-Operation is B type
-opcode:99
-func3: 5
-func7: 0
-rs1: X4
-rs2: X5
-rd: X8
-immediate: 0x8
-EXECUTE: Executed BGE operation
-MEMORY: Memory not accessed
-WRITEBACK: No Writeback
-
-Clock cycle: 3
-
-
-FETCH: Fetched instruction 0x512023 from PC 0x10
-DECODE:
-Operation is S type
-opcode:35
-func3: 2
-func7: 0
-rs1: X2
-rs2: X5
+rs2: X0
 rd: X0
 immediate: 0x0
-EXECUTE: Executed STORE operation
-MEMORY: Memory accessed for instruction at PC 0x10 having value 0x14
-WRITEBACK: No Writeback
-
-Clock cycle: 4
-
-
-FETCH: Fetched instruction 0x12303 from PC 0x14
+-1
+FETCH: Fetched instruction 0x33 from PC 0xffffffff
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
 DECODE:
-Operation is I type
-opcode:3
-func3: 2
+Operation is R type
+opcode:51
+func3: 0
 func7: 0
-rs1: X2
+rs1: X0
 rs2: X0
-rd: X6
+rd: X0
 immediate: 0x0
-EXECUTE: Executed LOAD operation
-MEMORY: Memory accessed for instruction at PC 0x14 having value 0x14
-WRITEBACK: Write 0x14 to X6
-
-Clock cycle: 5
-
-
-FETCH: Fetched instruction 0x7fffffff from PC 0x18
-DECODE:
-Operation is I type
-opcode:127
-func3: 7
-func7: 63
-rs1: X31
-rs2: X31
-rd: X31
-immediate: 0x0
-EXECUTE: Executed LOAD operation
+EXECUTE: Executed ADD operation
 MEMORY: Memory not accessed
-WRITEBACK: No Writeback
-
-Clock cycle: 6
+No Writeback
 
 
-No instruction at PC 0x1c
+FD_reg: pc=-1
+DE_reg: pc=-1, rd=0
+EM_reg: pc=-1, rd=0
+MW_reg: pc=-1, rd=0
+
+
+No Writeback
+
+
+FD_reg: pc=-1
+DE_reg: pc=-1, rd=0
+EM_reg: pc=-1, rd=0
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X0
+immediate: 0x0
+0
+FETCH: Fetched instruction 0x2b3 from PC 0x0
+No Writeback
+
+
+FD_reg: pc=0
+DE_reg: pc=-1, rd=0
+EM_reg: pc=-1, rd=0
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X5
+immediate: 0x0
+4
+FETCH: Fetched instruction 0x283b3 from PC 0x4
+No Writeback
+
+
+FD_reg: pc=4
+DE_reg: pc=0, rd=5
+EM_reg: pc=-1, rd=0
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 3
+rd: 5
+rd: 5
+rd: 0
+rs1/rs2: 5 0
+8
+No Writeback
+
+
+FD_reg: pc=4
+DE_reg: pc=-1, rd=0
+EM_reg: pc=0, rd=5
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 2
+rd: 0
+rd: 0
+rd: 5
+rs1/rs2: 5 0
+8
+WRITEBACK: Write 0x0 to X5
+
+
+FD_reg: pc=4
+DE_reg: pc=-1, rd=0
+EM_reg: pc=-1, rd=0
+MW_reg: pc=0, rd=5
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 1
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 5 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X5
+rs2: X0
+rd: X7
+immediate: 0x0
+8
+FETCH: Fetched instruction 0x28433 from PC 0x8
+No Writeback
+
+
+FD_reg: pc=8
+DE_reg: pc=4, rd=7
+EM_reg: pc=-1, rd=0
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 7
+rd: 7
+rd: 0
+rs1/rs2: 5 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X5
+rs2: X0
+rd: X8
+immediate: 0x0
+12
+FETCH: Fetched instruction 0x28533 from PC 0xc
+No Writeback
+
+
+FD_reg: pc=12
+DE_reg: pc=8, rd=8
+EM_reg: pc=4, rd=7
+MW_reg: pc=-1, rd=0
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 8
+rd: 8
+rd: 7
+rs1/rs2: 5 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X5
+rs2: X0
+rd: X10
+immediate: 0x0
+16
+FETCH: Fetched instruction 0x28633 from PC 0x10
+WRITEBACK: Write 0x0 to X7
+
+
+FD_reg: pc=16
+DE_reg: pc=12, rd=10
+EM_reg: pc=8, rd=8
+MW_reg: pc=4, rd=7
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 10
+rd: 10
+rd: 8
+rs1/rs2: 5 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X5
+rs2: X0
+rd: X12
+immediate: 0x0
+20
+FETCH: Fetched instruction 0x286b3 from PC 0x14
+WRITEBACK: Write 0x0 to X8
+
+
+FD_reg: pc=20
+DE_reg: pc=16, rd=12
+EM_reg: pc=12, rd=10
+MW_reg: pc=8, rd=8
+
+
+MEMORY: Memory not accessed
+EXECUTE: Executed ADD operation
+stalls: 0
+rd: 12
+rd: 12
+rd: 10
+rs1/rs2: 5 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X5
+rs2: X0
+rd: X13
+immediate: 0x0
+24
+No instruction at PC 0x18
 Exiting...
 
