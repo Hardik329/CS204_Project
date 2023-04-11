@@ -1,5 +1,7 @@
--1
 FETCH: Fetched instruction 0x33 from PC 0xffffffff
+FD_reg back pc=-1
+FD: -1 -1
+FD front from decode pc=-1
 stalls: 0
 rd: 0
 rd: 0
@@ -14,8 +16,11 @@ rs1: X0
 rs2: X0
 rd: X0
 immediate: 0x0
--1
+DE_reg back pc=-1
 FETCH: Fetched instruction 0x33 from PC 0xffffffff
+FD_reg back pc=-1
+FD: -1 -1
+FD front from decode pc=-1
 stalls: 0
 rd: 0
 rd: 0
@@ -30,28 +35,19 @@ rs1: X0
 rs2: X0
 rd: X0
 immediate: 0x0
+DE_reg back pc=-1
+taken: 0
 EXECUTE: Executed ADD operation
 MEMORY: Memory not accessed
-No Writeback
-
-
-FD_reg: pc=-1
-DE_reg: pc=-1, rd=0
-EM_reg: pc=-1, rd=0
-MW_reg: pc=-1, rd=0
-
-
-No Writeback
-
-
-FD_reg: pc=-1
-DE_reg: pc=-1, rd=0
-EM_reg: pc=-1, rd=0
-MW_reg: pc=-1, rd=0
-
-
-MEMORY: Memory not accessed
-EXECUTE: Executed ADD operation
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x4500293 from PC 0x0
+FD_reg back pc=0
+FD: -1 0
+FD front from decode pc=-1
+DE: -1 -1
+EM: -1 -1
+MW: -1 -1
 stalls: 0
 rd: 0
 rd: 0
@@ -66,203 +62,201 @@ rs1: X0
 rs2: X0
 rd: X0
 immediate: 0x0
-0
-FETCH: Fetched instruction 0x2b3 from PC 0x0
-No Writeback
-
-
-FD_reg: pc=0
-DE_reg: pc=-1, rd=0
-EM_reg: pc=-1, rd=0
-MW_reg: pc=-1, rd=0
-
-
-MEMORY: Memory not accessed
+DE_reg back pc=-1
+taken: 0
 EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x51a023 from PC 0x4
+FD_reg back pc=4
+FD: 0 4
+FD front from decode pc=0
+DE: -1 -1
+EM: -1 -1
+MW: -1 -1
 stalls: 0
 rd: 0
 rd: 0
 rd: 0
-rs1/rs2: 0 0
+rs1/rs2: 0 5
 DECODE:
-Operation is R type
-opcode:51
+Operation is I type
+opcode:19
 func3: 0
-func7: 0
+func7: 2
 rs1: X0
-rs2: X0
+rs2: X5
 rd: X5
-immediate: 0x0
-4
-FETCH: Fetched instruction 0x283b3 from PC 0x4
-No Writeback
-
-
-FD_reg: pc=4
-DE_reg: pc=0, rd=5
-EM_reg: pc=-1, rd=0
-MW_reg: pc=-1, rd=0
-
-
-MEMORY: Memory not accessed
+immediate: 0x45
+DE_reg back pc=0
+taken: 0
 EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0x8
+FD_reg back pc=8
+FD: 4 8
+FD front from decode pc=4
+DE: 0 0
+EM: -1 -1
+MW: -1 -1
 stalls: 3
 rd: 5
-rd: 5
 rd: 0
-rs1/rs2: 5 0
-8
-No Writeback
-
-
-FD_reg: pc=4
-DE_reg: pc=-1, rd=0
-EM_reg: pc=0, rd=5
-MW_reg: pc=-1, rd=0
-
-
+rd: 0
+rs1/rs2: 3 5
+ty: 8
+newpush: 4
+taken: 0
+EXECUTE: Executed ADDI operation
 MEMORY: Memory not accessed
-EXECUTE: Executed ADD operation
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FD: 4 8
+FD front from decode pc=4
+DE: -1 -1
+EM: 0 0
+MW: -1 -1
 stalls: 2
 rd: 0
-rd: 0
 rd: 5
-rs1/rs2: 5 0
-8
-WRITEBACK: Write 0x0 to X5
-
-
-FD_reg: pc=4
-DE_reg: pc=-1, rd=0
-EM_reg: pc=-1, rd=0
-MW_reg: pc=0, rd=5
-
-
-MEMORY: Memory not accessed
+rd: 0
+rs1/rs2: 3 5
+taken: 0
 EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+PC = 0
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FD: 4 8
+FD front from decode pc=4
+DE: -1 -1
+EM: -1 -1
+MW: 0 0
 stalls: 1
 rd: 0
 rd: 0
+rd: 5
+rs1/rs2: 3 5
+taken: 0
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+PC = -1
+WRITEBACK: Write 0x45 to X5
+PC = 0
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0x8
+FD_reg back pc=8
+FD: 4 8
+FD front from decode pc=4
+DE: -1 -1
+EM: -1 -1
+MW: -1 -1
+stalls: 0
 rd: 0
-rs1/rs2: 5 0
-DECODE:
-Operation is R type
-opcode:51
-func3: 0
-func7: 0
-rs1: X5
-rs2: X0
-rd: X7
-immediate: 0x0
-8
-FETCH: Fetched instruction 0x28433 from PC 0x8
-No Writeback
-
-
-FD_reg: pc=8
-DE_reg: pc=4, rd=7
-EM_reg: pc=-1, rd=0
-MW_reg: pc=-1, rd=0
-
-
-MEMORY: Memory not accessed
-EXECUTE: Executed ADD operation
-stalls: 0
-rd: 7
-rd: 7
 rd: 0
-rs1/rs2: 5 0
+rd: 0
+rs1/rs2: 3 5
 DECODE:
-Operation is R type
-opcode:51
-func3: 0
+Operation is S type
+opcode:35
+func3: 2
 func7: 0
-rs1: X5
-rs2: X0
-rd: X8
+rs1: X3
+rs2: X5
+rd: X0
 immediate: 0x0
-12
-FETCH: Fetched instruction 0x28533 from PC 0xc
-No Writeback
-
-
-FD_reg: pc=12
-DE_reg: pc=8, rd=8
-EM_reg: pc=4, rd=7
-MW_reg: pc=-1, rd=0
-
-
-MEMORY: Memory not accessed
+DE_reg back pc=4
+taken: 0
 EXECUTE: Executed ADD operation
-stalls: 0
-rd: 8
-rd: 8
-rd: 7
-rs1/rs2: 5 0
-DECODE:
-Operation is R type
-opcode:51
-func3: 0
-func7: 0
-rs1: X5
-rs2: X0
-rd: X10
-immediate: 0x0
-16
-FETCH: Fetched instruction 0x28633 from PC 0x10
-WRITEBACK: Write 0x0 to X7
-
-
-FD_reg: pc=16
-DE_reg: pc=12, rd=10
-EM_reg: pc=8, rd=8
-MW_reg: pc=4, rd=7
-
-
 MEMORY: Memory not accessed
-EXECUTE: Executed ADD operation
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0xc
+FD_reg back pc=12
+FD: 8 12
+FD front from decode pc=8
+DE: 4 4
+EM: -1 -1
+MW: -1 -1
 stalls: 0
-rd: 10
-rd: 10
-rd: 8
-rs1/rs2: 5 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
 DECODE:
 Operation is R type
 opcode:51
 func3: 0
 func7: 0
-rs1: X5
+rs1: X0
 rs2: X0
-rd: X12
+rd: X0
 immediate: 0x0
-20
-FETCH: Fetched instruction 0x286b3 from PC 0x14
-WRITEBACK: Write 0x0 to X8
-
-
-FD_reg: pc=20
-DE_reg: pc=16, rd=12
-EM_reg: pc=12, rd=10
-MW_reg: pc=8, rd=8
-
-
+DE_reg back pc=8
+taken: 0
+EXECUTE: Executed STORE operation
 MEMORY: Memory not accessed
-EXECUTE: Executed ADD operation
+PC = -1
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0x10
+FD_reg back pc=16
+FD: 8 16
+FD front from decode pc=8
+DE: 8 8
+EM: 4 4
+MW: -1 -1
 stalls: 0
-rd: 12
-rd: 12
-rd: 10
-rs1/rs2: 5 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
 DECODE:
 Operation is R type
 opcode:51
 func3: 0
 func7: 0
-rs1: X5
+rs1: X0
 rs2: X0
-rd: X13
+rd: X0
 immediate: 0x0
-24
-No instruction at PC 0x18
-Exiting...
-
+DE_reg back pc=8
+taken: 0
+EXECUTE: Executed ADD operation
+MEMORY: Memory accessed for instruction at PC 0x4 having value 0x45
+No Writeback for PC = -1
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0x14
+FD_reg back pc=20
+FD: 12 20
+FD front from decode pc=12
+DE: 8 8
+EM: 8 8
+MW: 4 4
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X0
+immediate: 0x0
+DE_reg back pc=12
+taken: 0
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+PC = 8
+No Writeback for PC = 4
+Enter 1 for run, 0 for step: FETCH: Fetched instruction 0x33 from PC 0x18
+FD_reg back pc=24
+FD: 16 24
+FD front from decode pc=16
+DE: 12 12
+EM: 8 8
+MW: 8 8
+stalls: 0

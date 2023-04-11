@@ -1,55 +1,395 @@
-FETCH: Fetched instruction 0x3400213 from PC 0x0
+FETCH: Fetched instruction 0x100000b7 from PC 0x0
+DECODE:
+Operation is U type
+opcode:55
+func3: 0
+func7: 8
+rs1: X0
+rs2: X0
+rd: X1
+immediate: 0x10000
+EXECUTE: Executed LUI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X1
+
+Clock cycle: 1
+
+
+FETCH: Fetched instruction 0xa00193 from PC 0x4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X10
+rd: X3
+immediate: 0xa
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa to X3
+
+Clock cycle: 2
+
+
+FETCH: Fetched instruction 0x10000137 from PC 0x8
+DECODE:
+Operation is U type
+opcode:55
+func3: 0
+func7: 8
+rs1: X0
+rs2: X0
+rd: X2
+immediate: 0x10000
+EXECUTE: Executed LUI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X2
+
+Clock cycle: 3
+
+
+FETCH: Fetched instruction 0x10113 from PC 0xc
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X0
+rd: X2
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X2
+
+Clock cycle: 4
+
+
+FETCH: Fetched instruction 0x10000237 from PC 0x10
+DECODE:
+Operation is U type
+opcode:55
+func3: 0
+func7: 8
+rs1: X0
+rs2: X0
+rd: X4
+immediate: 0x10000
+EXECUTE: Executed LUI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X4
+
+Clock cycle: 5
+
+
+FETCH: Fetched instruction 0x5020213 from PC 0x14
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 2
+rs1: X4
+rs2: X16
+rd: X4
+immediate: 0x50
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 6
+
+
+FETCH: Fetched instruction 0x20e13 from PC 0x18
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X0
+rd: X28
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X28
+
+Clock cycle: 7
+
+
+FETCH: Fetched instruction 0x293 from PC 0x1c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X5
+
+Clock cycle: 8
+
+
+FETCH: Fetched instruction 0x800006f from PC 0x20
+DECODE:
+Operation is J type
+opcode:111
+func3: 0
+func7: 4
+rs1: X0
+rs2: X0
+rd: X0
+immediate: 0x80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 9
+
+
+FETCH: Fetched instruction 0x393 from PC 0xa0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X7
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X7
+
+Clock cycle: 10
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 11
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X5
+
+Clock cycle: 12
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 13
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 14
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000000 to X5
+
+Clock cycle: 15
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
 DECODE:
 Operation is I type
 opcode:19
 func3: 0
 func7: 1
 rs1: X0
-rs2: X20
-rd: X4
-immediate: 0x34
+rs2: X3
+rd: X6
+immediate: 0x23
 EXECUTE: Executed ADDI operation
 MEMORY: Memory not accessed
-WRITEBACK: Write 0x34 to X4
+WRITEBACK: Write 0x23 to X6
 
-Clock cycle: 1
+Clock cycle: 16
 
 
-FETCH: Fetched instruction 0x1400293 from PC 0x4
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2000000 to X6
+
+Clock cycle: 17
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x12000000 to X5
+
+Clock cycle: 18
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
 DECODE:
 Operation is I type
 opcode:19
 func3: 0
 func7: 0
 rs1: X0
-rs2: X20
-rd: X5
-immediate: 0x14
+rs2: X4
+rd: X8
+immediate: 0x4
 EXECUTE: Executed ADDI operation
 MEMORY: Memory not accessed
-WRITEBACK: Write 0x14 to X5
+WRITEBACK: Write 0x4 to X8
 
-Clock cycle: 2
+Clock cycle: 19
 
 
-FETCH: Fetched instruction 0x525463 from PC 0x8
+FETCH: Fetched instruction 0x829333 from PC 0x44
 DECODE:
-Operation is B type
-opcode:99
-func3: 5
+Operation is R type
+opcode:51
+func3: 1
 func7: 0
-rs1: X4
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x20000000 to X6
+
+Clock cycle: 20
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x32000000 to X5
+
+Clock cycle: 21
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
 rs2: X5
-rd: X8
-immediate: 0x8
-EXECUTE: Executed BGE operation
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x32000000 to X1
+
+Clock cycle: 22
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
 MEMORY: Memory not accessed
 WRITEBACK: No Writeback
 
-Clock cycle: 3
+Clock cycle: 23
 
 
-FETCH: Fetched instruction 0x512023 from PC 0x10
+FETCH: Fetched instruction 0x512023 from PC 0xa8
 DECODE:
 Operation is S type
 opcode:35
@@ -60,30 +400,11522 @@ rs2: X5
 rd: X0
 immediate: 0x0
 EXECUTE: Executed STORE operation
-MEMORY: Memory accessed for instruction at PC 0x10 having value 0x14
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x32000000
 WRITEBACK: No Writeback
 
-Clock cycle: 4
+Clock cycle: 24
 
 
-FETCH: Fetched instruction 0x12303 from PC 0x14
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 25
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000004 to X2
+
+Clock cycle: 26
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 27
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X7
+
+Clock cycle: 28
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 29
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 30
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x32000000 to X5
+
+Clock cycle: 31
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 32
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 33
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x32000000 to X5
+
+Clock cycle: 34
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 35
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6400000 to X6
+
+Clock cycle: 36
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x34400000 to X5
+
+Clock cycle: 37
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 38
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x44000000 to X6
+
+Clock cycle: 39
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x70400000 to X5
+
+Clock cycle: 40
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x70400000 to X1
+
+Clock cycle: 41
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 42
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 43
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 44
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000008 to X2
+
+Clock cycle: 45
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 46
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X7
+
+Clock cycle: 47
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 48
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 49
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x70400000 to X5
+
+Clock cycle: 50
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 51
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 52
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x70400000 to X5
+
+Clock cycle: 53
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 54
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe080000 to X6
+
+Clock cycle: 55
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7e480000 to X5
+
+Clock cycle: 56
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 57
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe4800000 to X6
+
+Clock cycle: 58
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9ac80000 to X5
+
+Clock cycle: 59
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9ac80000 to X1
+
+Clock cycle: 60
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 61
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x9ac80000
+WRITEBACK: No Writeback
+
+Clock cycle: 62
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x9ac80000
+WRITEBACK: No Writeback
+
+Clock cycle: 63
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000000c to X2
+
+Clock cycle: 64
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 65
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X7
+
+Clock cycle: 66
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 67
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 68
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9ac80000 to X5
+
+Clock cycle: 69
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 70
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 71
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9ac80000 to X5
+
+Clock cycle: 72
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 73
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x13590000 to X6
+
+Clock cycle: 74
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x89910000 to X5
+
+Clock cycle: 75
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 76
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x99100000 to X6
+
+Clock cycle: 77
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 78
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10810000 to X1
+
+Clock cycle: 79
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 80
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 81
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 82
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000010 to X2
+
+Clock cycle: 83
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 84
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X7
+
+Clock cycle: 85
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 86
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 87
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 88
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 89
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 90
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 91
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 92
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2102000 to X6
+
+Clock cycle: 93
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x12912000 to X5
+
+Clock cycle: 94
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 95
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x29120000 to X6
+
+Clock cycle: 96
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3b832000 to X5
+
+Clock cycle: 97
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3b832000 to X1
+
+Clock cycle: 98
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 99
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 100
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 101
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000014 to X2
+
+Clock cycle: 102
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 103
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X7
+
+Clock cycle: 104
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 105
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 106
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3b832000 to X5
+
+Clock cycle: 107
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 108
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X6
+
+Clock cycle: 109
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3b832000 to X5
+
+Clock cycle: 110
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 111
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7706400 to X6
+
+Clock cycle: 112
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3cf34400 to X5
+
+Clock cycle: 113
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 114
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xcf344000 to X6
+
+Clock cycle: 115
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 116
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xf3c70400 to X1
+
+Clock cycle: 117
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 118
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 119
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 120
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000018 to X2
+
+Clock cycle: 121
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X4
+
+Clock cycle: 122
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X7
+
+Clock cycle: 123
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 124
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 125
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 126
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 127
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x80000000 to X6
+
+Clock cycle: 128
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x73c70400 to X5
+
+Clock cycle: 129
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 130
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe78e080 to X6
+
+Clock cycle: 131
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7dbfe480 to X5
+
+Clock cycle: 132
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 133
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xdbfe4800 to X6
+
+Clock cycle: 134
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 135
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa641ac80 to X1
+
+Clock cycle: 136
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 137
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 138
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 139
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000001c to X2
+
+Clock cycle: 140
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X4
+
+Clock cycle: 141
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X7
+
+Clock cycle: 142
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 143
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 144
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 145
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 146
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x90000000 to X6
+
+Clock cycle: 147
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3641ac80 to X5
+
+Clock cycle: 148
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 149
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6c83590 to X6
+
+Clock cycle: 150
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x30899910 to X5
+
+Clock cycle: 151
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 152
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8999100 to X6
+
+Clock cycle: 153
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x38100810 to X5
+
+Clock cycle: 154
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x38100810 to X1
+
+Clock cycle: 155
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 156
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 157
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 158
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000020 to X2
+
+Clock cycle: 159
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000070 to X4
+
+Clock cycle: 160
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X7
+
+Clock cycle: 161
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 162
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 163
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x38100810 to X5
+
+Clock cycle: 164
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 165
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2000000 to X6
+
+Clock cycle: 166
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3a100810 to X5
+
+Clock cycle: 167
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 168
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7420102 to X6
+
+Clock cycle: 169
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3d520912 to X5
+
+Clock cycle: 170
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 171
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xd5209120 to X6
+
+Clock cycle: 172
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 173
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe8729832 to X1
+
+Clock cycle: 174
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 175
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 176
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 177
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000024 to X2
+
+Clock cycle: 178
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000074 to X4
+
+Clock cycle: 179
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9 to X7
+
+Clock cycle: 180
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 181
+
+
+FETCH: Fetched instruction 0xf81fff6f from PC 0xa4
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 124
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffff80
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa8 to X30
+
+Clock cycle: 182
+
+
+FETCH: Fetched instruction 0x1002b3 from PC 0x24
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X1
+rd: X5
+immediate: 0xffffff80
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 183
+
+
+FETCH: Fetched instruction 0x1500413 from PC 0x28
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X21
+rd: X8
+immediate: 0x15
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x15 to X8
+
+Clock cycle: 184
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x2c
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x15
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6400000 to X6
+
+Clock cycle: 185
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x30
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x15
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xee329832 to X5
+
+Clock cycle: 186
+
+
+FETCH: Fetched instruction 0x2300313 from PC 0x34
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 1
+rs1: X0
+rs2: X3
+rd: X6
+immediate: 0x23
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x23 to X6
+
+Clock cycle: 187
+
+
+FETCH: Fetched instruction 0x62d333 from PC 0x38
+DECODE:
+Operation is R type
+opcode:51
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X6
+immediate: 0x23
+EXECUTE: Executed SRL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1dc65306 to X6
+
+Clock cycle: 188
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x3c
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x23
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xf3f4cb34 to X5
+
+Clock cycle: 189
+
+
+FETCH: Fetched instruction 0x400413 from PC 0x40
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X0
+rs2: X4
+rd: X8
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 190
+
+
+FETCH: Fetched instruction 0x829333 from PC 0x44
+DECODE:
+Operation is R type
+opcode:51
+func3: 1
+func7: 0
+rs1: X5
+rs2: X8
+rd: X6
+immediate: 0x4
+EXECUTE: Executed SLL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3f4cb340 to X6
+
+Clock cycle: 191
+
+
+FETCH: Fetched instruction 0x62c2b3 from PC 0x48
+DECODE:
+Operation is R type
+opcode:51
+func3: 4
+func7: 0
+rs1: X5
+rs2: X6
+rd: X5
+immediate: 0x4
+EXECUTE: Executed XOR operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 192
+
+
+FETCH: Fetched instruction 0x5000b3 from PC 0x4c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X5
+rd: X1
+immediate: 0x4
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xccb87874 to X1
+
+Clock cycle: 193
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x50
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 194
+
+
+FETCH: Fetched instruction 0x512023 from PC 0xa8
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X2
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xa8 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 195
+
+
+FETCH: Fetched instruction 0x522023 from PC 0xac
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0xac having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 196
+
+
+FETCH: Fetched instruction 0x410113 from PC 0xb0
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X2
+rs2: X4
+rd: X2
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000028 to X2
+
+Clock cycle: 197
+
+
+FETCH: Fetched instruction 0x420213 from PC 0xb4
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000078 to X4
+
+Clock cycle: 198
+
+
+FETCH: Fetched instruction 0x138393 from PC 0xb8
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X7
+rs2: X1
+rd: X7
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa to X7
+
+Clock cycle: 199
+
+
+FETCH: Fetched instruction 0xfe33c4e3 from PC 0xbc
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X7
+rs2: X3
+rd: X9
+immediate: 0xffffffe8
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 200
+
+
+FETCH: Fetched instruction 0xfa1fff6f from PC 0xc0
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 125
+rs1: X31
+rs2: X1
+rd: X30
+immediate: 0xffffffa0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xc4 to X30
+
+Clock cycle: 201
+
+
+FETCH: Fetched instruction 0x533 from PC 0x60
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X10
+immediate: 0xffffffa0
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X10
+
+Clock cycle: 202
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffa0
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa to X8
+
+Clock cycle: 203
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9 to X8
+
+Clock cycle: 204
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 205
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 206
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 207
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
 DECODE:
 Operation is I type
 opcode:3
 func3: 2
 func7: 0
-rs1: X2
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x70400000
+WRITEBACK: Write 0x70400000 to X5
+
+Clock cycle: 208
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
 rs2: X0
 rd: X6
 immediate: 0x0
 EXECUTE: Executed LOAD operation
-MEMORY: Memory accessed for instruction at PC 0x14 having value 0x14
-WRITEBACK: Write 0x14 to X6
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
 
-Clock cycle: 5
+Clock cycle: 209
 
 
-FETCH: Fetched instruction 0x7fffffff from PC 0x18
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 210
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 211
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 212
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 213
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 214
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X5
+
+Clock cycle: 215
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 216
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 217
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 218
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 219
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x9ac80000
+WRITEBACK: No Writeback
+
+Clock cycle: 220
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 221
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 222
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 223
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 224
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 225
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x10810000
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 226
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 227
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 228
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 229
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 230
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 231
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 232
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 233
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 234
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 235
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 236
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X5
+
+Clock cycle: 237
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 238
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 239
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 240
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 241
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 242
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 243
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 244
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 245
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 246
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X7
+
+Clock cycle: 247
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 248
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 249
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 250
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 251
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 252
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 253
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 254
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X9
+
+Clock cycle: 255
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 256
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 257
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X7
+
+Clock cycle: 258
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 259
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 260
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 261
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 262
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 263
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 264
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 265
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X9
+
+Clock cycle: 266
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X4
+
+Clock cycle: 267
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 268
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X7
+
+Clock cycle: 269
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x38100810
+WRITEBACK: Write 0x38100810 to X5
+
+Clock cycle: 270
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 271
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 272
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 273
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 274
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 275
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 276
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X9
+
+Clock cycle: 277
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X4
+
+Clock cycle: 278
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 279
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000070 to X7
+
+Clock cycle: 280
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 281
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 282
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 283
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 284
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 285
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 286
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 287
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X9
+
+Clock cycle: 288
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000070 to X4
+
+Clock cycle: 289
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 290
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000074 to X7
+
+Clock cycle: 291
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 292
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x70400000
+WRITEBACK: Write 0x70400000 to X6
+
+Clock cycle: 293
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 294
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 295
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x70400000
+WRITEBACK: No Writeback
+
+Clock cycle: 296
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 297
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 298
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9 to X9
+
+Clock cycle: 299
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000074 to X4
+
+Clock cycle: 300
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 301
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X10
+
+Clock cycle: 302
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 303
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9 to X8
+
+Clock cycle: 304
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X8
+
+Clock cycle: 305
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 306
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 307
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 308
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X5
+
+Clock cycle: 309
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 310
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 311
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 312
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 313
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x9ac80000
+WRITEBACK: No Writeback
+
+Clock cycle: 314
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 315
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 316
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 317
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 318
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 319
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x10810000
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 320
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 321
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 322
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 323
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 324
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 325
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 326
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 327
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 328
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 329
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 330
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X5
+
+Clock cycle: 331
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 332
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 333
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 334
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 335
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 336
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 337
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 338
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X6
+
+Clock cycle: 339
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 340
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 341
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 342
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 343
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 344
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 345
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 346
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 347
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X7
+
+Clock cycle: 348
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 349
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X6
+
+Clock cycle: 350
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 351
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 352
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 353
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 354
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 355
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X9
+
+Clock cycle: 356
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 357
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 358
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X7
+
+Clock cycle: 359
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x38100810
+WRITEBACK: Write 0x38100810 to X5
+
+Clock cycle: 360
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X6
+
+Clock cycle: 361
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 362
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 363
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 364
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 365
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 366
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X9
+
+Clock cycle: 367
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X4
+
+Clock cycle: 368
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 369
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X7
+
+Clock cycle: 370
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 371
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X6
+
+Clock cycle: 372
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 373
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 374
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 375
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 376
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 377
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X9
+
+Clock cycle: 378
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X4
+
+Clock cycle: 379
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 380
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000070 to X7
+
+Clock cycle: 381
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 382
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x3b832000
+WRITEBACK: Write 0x3b832000 to X6
+
+Clock cycle: 383
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 384
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 385
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x3b832000
+WRITEBACK: No Writeback
+
+Clock cycle: 386
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 387
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 388
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X9
+
+Clock cycle: 389
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000070 to X4
+
+Clock cycle: 390
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 391
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X10
+
+Clock cycle: 392
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 393
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X8
+
+Clock cycle: 394
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X8
+
+Clock cycle: 395
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 396
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 397
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 398
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x10810000
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 399
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 400
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 401
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 402
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 403
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 404
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 405
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x32000000
+WRITEBACK: Write 0x32000000 to X5
+
+Clock cycle: 406
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 407
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 408
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 409
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 410
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 411
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 412
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 413
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 414
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 415
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 416
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 417
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 418
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 419
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 420
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 421
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 422
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 423
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 424
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 425
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 426
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 427
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 428
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 429
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 430
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 431
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 432
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 433
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X7
+
+Clock cycle: 434
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x38100810
+WRITEBACK: Write 0x38100810 to X5
+
+Clock cycle: 435
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 436
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 437
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X9
+
+Clock cycle: 438
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 439
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 440
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X7
+
+Clock cycle: 441
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 442
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x38100810
+WRITEBACK: Write 0x38100810 to X6
+
+Clock cycle: 443
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 444
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 445
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 446
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 447
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 448
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X9
+
+Clock cycle: 449
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X4
+
+Clock cycle: 450
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 451
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X7
+
+Clock cycle: 452
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 453
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x38100810
+WRITEBACK: Write 0x38100810 to X6
+
+Clock cycle: 454
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 455
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 456
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x38100810
+WRITEBACK: No Writeback
+
+Clock cycle: 457
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 458
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 459
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X9
+
+Clock cycle: 460
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000006c to X4
+
+Clock cycle: 461
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 462
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X10
+
+Clock cycle: 463
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 464
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X8
+
+Clock cycle: 465
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X8
+
+Clock cycle: 466
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 467
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 468
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 469
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x10810000
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 470
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 471
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 472
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 473
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 474
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 475
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 476
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 477
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 478
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 479
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 480
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 481
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 482
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 483
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 484
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 485
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 486
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 487
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 488
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 489
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 490
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 491
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 492
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 493
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 494
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 495
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 496
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 497
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 498
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x32000000
+WRITEBACK: Write 0x32000000 to X5
+
+Clock cycle: 499
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 500
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 501
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 502
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 503
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 504
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X7
+
+Clock cycle: 505
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 506
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 507
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 508
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 509
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 510
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 511
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 512
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X9
+
+Clock cycle: 513
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 514
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 515
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X7
+
+Clock cycle: 516
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 517
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x32000000
+WRITEBACK: Write 0x32000000 to X6
+
+Clock cycle: 518
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 519
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 520
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x32000000
+WRITEBACK: No Writeback
+
+Clock cycle: 521
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 522
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 523
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X9
+
+Clock cycle: 524
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000068 to X4
+
+Clock cycle: 525
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 526
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X10
+
+Clock cycle: 527
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 528
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X8
+
+Clock cycle: 529
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X8
+
+Clock cycle: 530
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 531
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 532
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 533
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 534
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 535
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 536
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 537
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 538
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 539
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 540
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 541
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X6
+
+Clock cycle: 542
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 543
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 544
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 545
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xa641ac80
+WRITEBACK: No Writeback
+
+Clock cycle: 546
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 547
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 548
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 549
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 550
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 551
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0x10810000
+WRITEBACK: Write 0x10810000 to X5
+
+Clock cycle: 552
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X6
+
+Clock cycle: 553
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 554
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 555
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 556
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 557
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 558
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 559
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 560
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 561
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 562
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 563
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 564
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 565
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 566
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 567
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 568
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X7
+
+Clock cycle: 569
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 570
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x10810000
+WRITEBACK: Write 0x10810000 to X6
+
+Clock cycle: 571
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 572
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 573
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0x10810000
+WRITEBACK: No Writeback
+
+Clock cycle: 574
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 575
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 576
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X9
+
+Clock cycle: 577
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000064 to X4
+
+Clock cycle: 578
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 579
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X10
+
+Clock cycle: 580
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 581
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x5 to X8
+
+Clock cycle: 582
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 583
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 584
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 585
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 586
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 587
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 588
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 589
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 590
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 591
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 592
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 593
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X5
+
+Clock cycle: 594
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X6
+
+Clock cycle: 595
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 596
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 597
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 598
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 599
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 600
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 601
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X6
+
+Clock cycle: 602
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 603
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 604
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 605
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 606
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 607
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 608
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 609
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 610
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X7
+
+Clock cycle: 611
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 612
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xf3c70400
+WRITEBACK: Write 0xf3c70400 to X6
+
+Clock cycle: 613
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 614
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 615
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0xf3c70400
+WRITEBACK: No Writeback
+
+Clock cycle: 616
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 617
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 618
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X9
+
+Clock cycle: 619
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000060 to X4
+
+Clock cycle: 620
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 621
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x6 to X10
+
+Clock cycle: 622
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 623
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x4 to X8
+
+Clock cycle: 624
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X8
+
+Clock cycle: 625
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 626
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 627
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 628
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 629
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 630
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 631
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 632
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 633
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 634
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 635
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X5
+
+Clock cycle: 636
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X6
+
+Clock cycle: 637
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 638
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 639
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 640
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 641
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X7
+
+Clock cycle: 642
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 643
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xe8729832
+WRITEBACK: Write 0xe8729832 to X6
+
+Clock cycle: 644
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 645
+
+
+FETCH: Fetched instruction 0xfd1fffef from PC 0x84
+DECODE:
+Operation is J type
+opcode:111
+func3: 7
+func7: 126
+rs1: X31
+rs2: X17
+rd: X31
+immediate: 0xffffffd0
+EXECUTE: Executed JAL operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x88 to X31
+
+Clock cycle: 646
+
+
+FETCH: Fetched instruction 0x63a023 from PC 0x54
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X7
+rs2: X6
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x54 having value 0xe8729832
+WRITEBACK: No Writeback
+
+Clock cycle: 647
+
+
+FETCH: Fetched instruction 0x522023 from PC 0x58
+DECODE:
+Operation is S type
+opcode:35
+func3: 2
+func7: 0
+rs1: X4
+rs2: X5
+rd: X0
+immediate: 0x0
+EXECUTE: Executed STORE operation
+MEMORY: Memory accessed for instruction at PC 0x58 having value 0xccb87874
+WRITEBACK: No Writeback
+
+Clock cycle: 648
+
+
+FETCH: Fetched instruction 0xf8067 from PC 0x5c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X31
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 649
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X9
+
+Clock cycle: 650
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1000005c to X4
+
+Clock cycle: 651
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 652
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x7 to X10
+
+Clock cycle: 653
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 654
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x3 to X8
+
+Clock cycle: 655
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X8
+
+Clock cycle: 656
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 657
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 658
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 659
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 660
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 661
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 662
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 663
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 664
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 665
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X7
+
+Clock cycle: 666
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xccb87874
+WRITEBACK: Write 0xccb87874 to X5
+
+Clock cycle: 667
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X6
+
+Clock cycle: 668
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 669
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X9
+
+Clock cycle: 670
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000058 to X4
+
+Clock cycle: 671
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 672
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x8 to X10
+
+Clock cycle: 673
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 674
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x2 to X8
+
+Clock cycle: 675
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X8
+
+Clock cycle: 676
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 677
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 678
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 679
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 680
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 681
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 682
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 683
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 684
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 685
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x9 to X10
+
+Clock cycle: 686
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 687
+
+
+FETCH: Fetched instruction 0x40a18433 from PC 0x64
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 32
+rs1: X3
+rs2: X10
+rd: X8
+immediate: 0xffffffcc
+EXECUTE: Executed SUB operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X8
+
+Clock cycle: 688
+
+
+FETCH: Fetched instruction 0xfff40413 from PC 0x68
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 127
+rs1: X8
+rs2: X31
+rd: X8
+immediate: 0xffffffff
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X8
+
+Clock cycle: 689
+
+
+FETCH: Fetched instruction 0x4b3 from PC 0x6c
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X9
+immediate: 0xffffffff
+EXECUTE: Executed ADD operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x0 to X9
+
+Clock cycle: 690
+
+
+FETCH: Fetched instruction 0xe0213 from PC 0x70
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X28
+rs2: X0
+rd: X4
+immediate: 0x0
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000050 to X4
+
+Clock cycle: 691
+
+
+FETCH: Fetched instruction 0x420393 from PC 0x74
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X7
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X7
+
+Clock cycle: 692
+
+
+FETCH: Fetched instruction 0x3a283 from PC 0x78
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X7
+rs2: X0
+rd: X5
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x78 having value 0xa641ac80
+WRITEBACK: Write 0xa641ac80 to X5
+
+Clock cycle: 693
+
+
+FETCH: Fetched instruction 0x22303 from PC 0x7c
+DECODE:
+Operation is I type
+opcode:3
+func3: 2
+func7: 0
+rs1: X4
+rs2: X0
+rd: X6
+immediate: 0x0
+EXECUTE: Executed LOAD operation
+MEMORY: Memory accessed for instruction at PC 0x7c having value 0x9ac80000
+WRITEBACK: Write 0x9ac80000 to X6
+
+Clock cycle: 694
+
+
+FETCH: Fetched instruction 0x62d463 from PC 0x80
+DECODE:
+Operation is B type
+opcode:99
+func3: 5
+func7: 0
+rs1: X5
+rs2: X6
+rd: X8
+immediate: 0x8
+EXECUTE: Executed BGE operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 695
+
+
+FETCH: Fetched instruction 0x148493 from PC 0x88
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X9
+rs2: X1
+rd: X9
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x1 to X9
+
+Clock cycle: 696
+
+
+FETCH: Fetched instruction 0x420213 from PC 0x8c
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X4
+rs2: X4
+rd: X4
+immediate: 0x4
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0x10000054 to X4
+
+Clock cycle: 697
+
+
+FETCH: Fetched instruction 0xfe84c2e3 from PC 0x90
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 127
+rs1: X9
+rs2: X8
+rd: X5
+immediate: 0xffffffe4
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 698
+
+
+FETCH: Fetched instruction 0x150513 from PC 0x94
+DECODE:
+Operation is I type
+opcode:19
+func3: 0
+func7: 0
+rs1: X10
+rs2: X1
+rd: X10
+immediate: 0x1
+EXECUTE: Executed ADDI operation
+MEMORY: Memory not accessed
+WRITEBACK: Write 0xa to X10
+
+Clock cycle: 699
+
+
+FETCH: Fetched instruction 0xfc3546e3 from PC 0x98
+DECODE:
+Operation is B type
+opcode:99
+func3: 4
+func7: 126
+rs1: X10
+rs2: X3
+rd: X13
+immediate: 0xffffffcc
+EXECUTE: Executed BLT operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 700
+
+
+FETCH: Fetched instruction 0xf0067 from PC 0x9c
+DECODE:
+Operation is I type
+opcode:103
+func3: 0
+func7: 0
+rs1: X30
+rs2: X0
+rd: X0
+immediate: 0x0
+EXECUTE: Executed JALR operation
+MEMORY: Memory not accessed
+WRITEBACK: No Writeback
+
+Clock cycle: 701
+
+
+FETCH: Fetched instruction 0x7fffffff from PC 0xc4
 DECODE:
 Operation is I type
 opcode:127
@@ -93,13 +11925,13 @@ rs1: X31
 rs2: X31
 rd: X31
 immediate: 0x0
-EXECUTE: Executed LOAD operation
+EXECUTE: Executed JALR operation
 MEMORY: Memory not accessed
 WRITEBACK: No Writeback
 
-Clock cycle: 6
+Clock cycle: 702
 
 
-No instruction at PC 0x1c
+No instruction at PC 0xc8
 Exiting...
 
