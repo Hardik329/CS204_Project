@@ -1,0 +1,59 @@
+================================================
+Functional Simulator for subset of RISCV Processor
+================================================
+
+README
+
+This is the final project of CS204 - Computer Architecture Course. The project involves building a RISCV-32 Simulator. All the code is written in C++. 
+
+Table of contents
+1. Group Members
+1. Directory Structure
+2. How to build
+3. How to execute
+
+Group Members
+
+1. Hardik Aggarwal
+2. Komalpreet Singh
+3. Ritesh Mohan Patil
+4. Edgar Aditya Thorpe
+
+Directory Structure:
+--------------------
+CS204-Project
+  |
+  |- bin
+      |
+      |- myRISCVSim
+  |- doc
+      |
+      |- design-doc.docx
+  |- include
+      |
+      |- myRISCVSim.h
+  |- src
+      |- main.c
+      |- Makefile
+      |- myRISCVSim.h
+  |- test
+      |- bubble_sort.mc
+      |- fib.mc
+      |- array_add.mc
+
+How to build
+------------
+For building:
+	$cd src
+	$make
+
+For cleaning the project:
+	$cd src
+	$make clean
+
+
+How to execute
+--------------
+cd bin
+./myRISCVSim ../test/array_add.mc
+

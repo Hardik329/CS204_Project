@@ -1,0 +1,5 @@
+addi x5 x0 3
+addi x3 x0 0
+loop:
+addi x3 x3 1
+blt x3 x5 loop

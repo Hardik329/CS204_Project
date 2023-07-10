@@ -1,0 +1,30 @@
+FETCH: Fetched instruction 0x33 from PC 0xffffffff
+FD_reg back pc=-1
+FD_reg front pc=-1
+FD: -1 -1
+0
+FD_SIZE 1
+FD: 1835365491 -1
+FD front from decode pc=-1
+stalls: 0
+rd: 0
+rd: 0
+rd: 0
+rs1/rs2: 0 0
+DECODE:
+Operation is R type
+opcode:51
+func3: 0
+func7: 0
+rs1: X0
+rs2: X0
+rd: X0
+immediate: 0x0
+DE_reg back pc=-1
+eror
+Enter cache size (in KB): 
+Enter cache block size (in B): 
+1. Direct mapped
+2. Fully associative
+3. Set associative
+Enter type of cache: 
