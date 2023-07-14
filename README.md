@@ -9,7 +9,7 @@ The project is divided into three phases:
 ## Phase 2:
 - Implemented five-stage pipeline with stages IF, DE, EX, MA, WB.
 - Implemented data forwarding and data stalling to remove hazards
-- Implemented bit prediction to reduce stalls
+- Implemented branch prediction to reduce stalls
 
 ## Phase 3:
 - Implemented cache memory
